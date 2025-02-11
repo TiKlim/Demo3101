@@ -1,0 +1,66 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+		MinHeight="450"
+		MinWidth="800"
+		WindowStartupLocation="CenterScreen"
+        x:Class="Demo3101.MainWindow"
+		x:CompileBindings="False"
+        Title="Demo3101">
+	<Grid ColumnDefinitions="*,*"
+		  RowDefinitions="Auto,*"
+		  ShowGridLines="True">
+		<DockPanel Background="#e1f4c8"
+				   Grid.ColumnSpan="2"
+				   Grid.Row="0">
+			<Border Background="#78b24b"
+					Height="70"
+					Width="70"
+					CornerRadius="90"
+					Margin="5">
+				<TextBlock Text="логотип"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"/>
+			</Border>
+			<Border Background="White"
+					Height="35"
+					Width="608"
+					CornerRadius="12">
+				<TextBlock Text="Организационная структура"
+						   HorizontalAlignment="Left"
+						   VerticalAlignment="Center"
+						   Margin="15 0 0 0"/>
+			</Border>
+		</DockPanel>
+
+		<ListBox Grid.Column="1"
+				 Grid.Row="1"
+				 Margin="20"
+				 Name="staffLB">
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<Border Background="#e1f4c8">
+						<Grid RowDefinitions="*,*,*,*">
+							<TextBlock Text=""
+									   Grid.Row="0"/>
+							<DockPanel Grid.Row="1">
+								<TextBlock Text="{Binding StaffSurname}"
+										   FontSize="18"/>
+								<TextBlock Text=" "
+										   FontSize="18"/>
+								<TextBlock Text="{Binding StaffName}"
+										   FontSize="18"/>
+								<TextBlock Text=" "
+										   FontSize="18"/>
+								<TextBlock Text="{Binding StaffPatronimic}"
+										   FontSize="18"/>
+							</DockPanel>
+						</Grid>
+					</Border>
+				</DataTemplate>
+			</ListBox.ItemTemplate>
+		</ListBox>
+	</Grid>
+</Window>
