@@ -9,5 +9,5 @@ public partial class Post
 
     public string? PostName { get; set; }
 
-    public virtual ICollection<StaffPost> StaffPosts { get; set; } = new List<StaffPost>();
+    public virtual ICollection<Staff> Idstaffs { get; set; } = new List<Staff>();
 }

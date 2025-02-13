@@ -23,5 +23,7 @@ public partial class Staff
 
     public virtual Office? StaffOfficeNavigation { get; set; }
 
-    public virtual ICollection<StaffPost> StaffPosts { get; set; } = new List<StaffPost>();
+    public virtual ICollection<Division> Iddepats { get; set; } = new List<Division>();
+
+    public virtual ICollection<Post> Idroles { get; set; } = new List<Post>();
 }

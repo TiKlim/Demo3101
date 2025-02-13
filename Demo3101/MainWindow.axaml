@@ -35,32 +35,90 @@
 			</Border>
 		</DockPanel>
 
-		<ListBox Grid.Column="1"
-				 Grid.Row="1"
-				 Margin="20"
-				 Name="staffLB">
-			<ListBox.ItemTemplate>
-				<DataTemplate>
-					<Border Background="#e1f4c8">
-						<Grid RowDefinitions="*,*,*,*">
-							<TextBlock Text=""
-									   Grid.Row="0"/>
-							<DockPanel Grid.Row="1">
-								<TextBlock Text="{Binding StaffSurname}"
-										   FontSize="18"/>
-								<TextBlock Text=" "
-										   FontSize="18"/>
-								<TextBlock Text="{Binding StaffName}"
-										   FontSize="18"/>
-								<TextBlock Text=" "
-										   FontSize="18"/>
-								<TextBlock Text="{Binding StaffPatronimic}"
-										   FontSize="18"/>
-							</DockPanel>
-						</Grid>
-					</Border>
-				</DataTemplate>
-			</ListBox.ItemTemplate>
-		</ListBox>
+		<Border Grid.Column="1"
+				Grid.Row="1"
+				Background="LightGray"
+				Margin="15">
+			<Grid RowDefinitions="*,Auto">
+				<ListBox Grid.Row="0"
+						 Background="LightGray"
+						 Margin="5"
+						 Name="staffLB">
+					<ListBox.ItemTemplate>
+						<DataTemplate>
+							<Border Background="#e1f4c8">
+								<Grid RowDefinitions="*,*,*,*">
+									<DockPanel Grid.Row="0"
+											   Margin="15 15 0 0">
+										<TextBlock Text="{Binding Iddepats.DivisionName}"/>
+										<TextBlock Text=" - "/>
+										<TextBlock Text="{Binding Idroles.PostName}"/>
+									</DockPanel>
+									<TextBlock Text="{Binding Iddepats.DivisionName}"
+											   Grid.Row="0"
+											   Margin="15 15 0 0"/>
+									<DockPanel Grid.Row="1"
+											   Margin="15 0 0 0">
+										<TextBlock Text="{Binding StaffSurname}"
+												   FontSize="18"/>
+										<TextBlock Text=" "
+												   FontSize="18"/>
+										<TextBlock Text="{Binding StaffName}"
+												   FontSize="18"/>
+										<TextBlock Text=" "
+												   FontSize="18"/>
+										<TextBlock Text="{Binding StaffPatronimic}"
+												   FontSize="18"/>
+									</DockPanel>
+									<DockPanel Grid.Row="2"
+											   Margin="15 0 0 0">
+										<TextBlock Text="{Binding StaffWorkPhone}"/>
+										<TextBlock Text="   "/>
+										<TextBlock Text="{Binding CorporateEmail}"/>
+									</DockPanel>
+									<TextBlock Text="{Binding StaffOfficeNavigation.OfficeName}"
+											   Grid.Row="3"
+											   Margin="15 0 0 15"/>
+								</Grid>
+							</Border>
+						</DataTemplate>
+					</ListBox.ItemTemplate>
+				</ListBox>
+				
+				<Button Grid.Row="1"
+						Background="#e1f4c8"
+						CornerRadius="0"
+						Height="40"
+						Width="40"
+						HorizontalAlignment="Right"
+						Margin="5">
+					<TextBlock Text="+"
+							   HorizontalAlignment="Center"
+							   VerticalAlignment="Center"
+							   FontSize="20"/>
+				</Button>
+			</Grid>
+		</Border>
+
+		<Border Grid.Column="0"
+				Grid.Row="1"
+				Background="LightGray"
+				Margin="15">
+			<Grid RowDefinitions="*,*,*,*,*,*,*">
+				<DockPanel Grid.Row="1">
+					<Line StartPoint="12,40"
+					  EndPoint="40,12"
+					  Margin="175 25 0 0"
+					  Stroke="Black"
+					  StrokeThickness="2"/>
+					<Line StartPoint="120,40"
+					  EndPoint="12,12"
+					  Margin="175 25 0 0"
+					  Stroke="Black"
+					  StrokeThickness="2"/>
+				</DockPanel>
+			</Grid>
+		</Border>
+		
 	</Grid>
 </Window>

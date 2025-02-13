@@ -9,11 +9,9 @@ public partial class Division
 
     public string? DivisionName { get; set; }
 
-    public virtual ICollection<Department> DepartmentDeps { get; set; } = new List<Department>();
+    public virtual ICollection<Division> Idadditionaldevis { get; set; } = new List<Division>();
 
-    public virtual ICollection<Department> DepartmentDivs { get; set; } = new List<Department>();
+    public virtual ICollection<Division> Idmaindevisions { get; set; } = new List<Division>();
 
-    public virtual ICollection<Department> DepartmentSubDeps { get; set; } = new List<Department>();
-
-    public virtual ICollection<StaffPost> StaffPosts { get; set; } = new List<StaffPost>();
+    public virtual ICollection<Staff> Idstaffs { get; set; } = new List<Staff>();
 }
