@@ -10,8 +10,32 @@ namespace Demo3101
         public MainWindow()
         {
             InitializeComponent();
+            toFirstDep.Click += ToFirstDep_Click;
+            adminHoz.Click += AdminHoz_Click;
+            toFirst.Click += ToFirst_Click;
+            toMain.Click += ToMain_Click;
             SetData();
         }
+
+        private void ToMain_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            firstDep.IsVisible = false;
+        } 
+
+        private void ToFirst_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            firstPodDepAdminHoz.IsVisible = false;
+        } 
+
+        private void AdminHoz_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            firstPodDepAdminHoz.IsVisible = true;
+        } 
+
+        private void ToFirstDep_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            firstDep.IsVisible = true;
+        } 
 
         private void SetData()
         {

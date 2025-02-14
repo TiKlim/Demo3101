@@ -23,12 +23,12 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Demo3101
-build_property.ProjectDir = C:\Users\prdb\source\repos\Demo3101\
+build_property.ProjectDir = C:\Users\prdb\Desktop\121\Demo3101\Demo3101\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[C:/Users/prdb/source/repos/Demo3101/App.axaml]
+[C:/Users/prdb/Desktop/121/Demo3101/Demo3101/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/prdb/source/repos/Demo3101/MainWindow.axaml]
+[C:/Users/prdb/Desktop/121/Demo3101/Demo3101/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

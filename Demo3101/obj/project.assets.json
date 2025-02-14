@@ -4445,11 +4445,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\prdb\\source\\repos\\Demo3101\\Demo3101.csproj",
+      "projectUniqueName": "C:\\Users\\prdb\\Desktop\\121\\Demo3101\\Demo3101\\Demo3101.csproj",
       "projectName": "Demo3101",
-      "projectPath": "C:\\Users\\prdb\\source\\repos\\Demo3101\\Demo3101.csproj",
+      "projectPath": "C:\\Users\\prdb\\Desktop\\121\\Demo3101\\Demo3101\\Demo3101.csproj",
       "packagesPath": "C:\\Users\\prdb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\prdb\\source\\repos\\Demo3101\\obj\\",
+      "outputPath": "C:\\Users\\prdb\\Desktop\\121\\Demo3101\\Demo3101\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\prdb\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4460,7 +4460,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
