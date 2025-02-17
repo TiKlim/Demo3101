@@ -2,9 +2,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-		MinHeight="450"
-		MinWidth="800"
+        mc:Ignorable="d" d:DesignWidth="1300" d:DesignHeight="850"
+		MinHeight="850"
+		MinWidth="1300"
+		MaxHeight="850"
+		MaxWidth="1300"
 		WindowStartupLocation="CenterScreen"
         x:Class="Demo3101.MainWindow"
 		x:CompileBindings="False"
@@ -12,7 +14,7 @@
 	<!--Главный Grid-->
 	<Grid ColumnDefinitions="*,*"
 		  RowDefinitions="Auto,*"
-		  ShowGridLines="True">
+		  ShowGridLines="False">
 		<!--Шапка окна-->
 		<DockPanel Background="#e1f4c8"
 				   Grid.ColumnSpan="2"
@@ -90,14 +92,14 @@
 				<Button Grid.Row="1"
 						Background="#e1f4c8"
 						CornerRadius="0"
-						Height="40"
-						Width="40"
+						Height="70"
+						Width="70"
 						HorizontalAlignment="Right"
 						Margin="5">
 					<TextBlock Text="+"
 							   HorizontalAlignment="Center"
 							   VerticalAlignment="Center"
-							   FontSize="20"/>
+							   FontSize="40"/>
 				</Button>
 			</Grid>
 		</Border>
@@ -110,29 +112,30 @@
 			<Grid RowDefinitions="*,*,*,*,*,*,*,*,*,*,*,*,*,*"
 				  ShowGridLines="False"
 				  Margin="5">
-				<!--ЗАГОЛОВОК: Дороги России-->
-				<Button Grid.Row="0"
-						HorizontalAlignment="Left"
-						Height="20"
-						Width="160"
-						CornerRadius="0"
-						Background="Green">
-					<TextBlock Text="Дороги России"
-							   FontSize="9"
-							   HorizontalAlignment="Center"
-							   VerticalAlignment="Center"/>
-				</Button>
 				<!--Основная линия-->
-				<Line StartPoint="0,0"
-					  EndPoint="0,320"
+				<Line StartPoint="0,4"
+					  EndPoint="0,707"
 					  Stroke="Black"
 					  StrokeThickness="2"
 					  Grid.RowSpan="13"/>
+				<!--ЗАГОЛОВОК: Дороги России-->
+				<Button Grid.Row="0"
+						HorizontalAlignment="Left"
+						Height="50"
+						Width="310"
+						Margin="0 3 0 0"
+						CornerRadius="0"
+						Background="Green"
+						Name="mainButton">
+					<TextBlock Text="Дороги России"
+							   FontSize="12"
+							   HorizontalAlignment="Center"
+							   VerticalAlignment="Center"/>
+				</Button>
 				<!--Административный департамент-->
 				<DockPanel Grid.Row="1"
 						   HorizontalAlignment="Left"
 						   Margin="0 20 0 0">
-					<!--"10,20" "90,0" "90,20" "10,0"-->
 					<Line StartPoint="50,0"
 						  EndPoint="0,0"
 						  Stroke="Black"
@@ -141,13 +144,14 @@
 					<Button Grid.Row="0"
 							HorizontalAlignment="Left"
 							VerticalAlignment="Center"
-							Height="20"
-							Width="250"
+							Height="50"
+							Width="310"
 							CornerRadius="0"
+							Margin="0 3 0 0"
 							Background="#e1f4c8"
 							Name="toFirstDep">
 						<TextBlock Text="Административный департамент"
-								   FontSize="9"
+								   FontSize="12"
 								   HorizontalAlignment="Center"
 								   VerticalAlignment="Center"/>
 					</Button>
@@ -164,12 +168,15 @@
 					<Button Grid.Row="0"
 							HorizontalAlignment="Left"
 							VerticalAlignment="Center"
-							Height="20"
-							Width="250"
+							Height="50"
+							Width="310"
 							CornerRadius="0"
-							Background="#e1f4c8">
+							Margin="0 3 0 0"
+							Background="#e1f4c8"
+							Name="toSecondDep"> 
 						<TextBlock Text="Академия Умные дороги"
-								   FontSize="9"
+								   
+								   FontSize="12"
 								   HorizontalAlignment="Center"
 								   VerticalAlignment="Center"/>
 					</Button>
@@ -186,12 +193,14 @@
 					<Button Grid.Row="0"
 							HorizontalAlignment="Left"
 							VerticalAlignment="Center"
-							Height="20"
-							Width="250"
+							Height="50"
+							Width="310"
 							CornerRadius="0"
-							Background="#e1f4c8">
+							Margin="0 3 0 0"
+							Background="#e1f4c8"
+							Name="toThirdDep">
 						<TextBlock Text="Аппарат управления"
-								   FontSize="9"
+								   FontSize="12"
 								   HorizontalAlignment="Center"
 								   VerticalAlignment="Center"/>
 					</Button>
@@ -208,12 +217,14 @@
 					<Button Grid.Row="0"
 							HorizontalAlignment="Left"
 							VerticalAlignment="Center"
-							Height="20"
-							Width="250"
+							Height="50"
+							Width="310"
 							CornerRadius="0"
-							Background="#e1f4c8">
+							Margin="0 3 0 0"
+							Background="#e1f4c8"
+							Name="toFourthDep">
 						<TextBlock Text="Департамент коммуникаций"
-								   FontSize="9"
+								   FontSize="12"
 								   HorizontalAlignment="Center"
 								   VerticalAlignment="Center"/>
 					</Button>
@@ -230,12 +241,14 @@
 					<Button Grid.Row="0"
 							HorizontalAlignment="Left"
 							VerticalAlignment="Center"
-							Height="20"
-							Width="250"
+							Height="50"
+							Width="310"
 							CornerRadius="0"
-							Background="#e1f4c8"> 
+							Margin="0 3 0 0"
+							Background="#e1f4c8"
+							Name="toFifthDep"> 
 						<TextBlock Text="Департамент маркетинга и партнерских отношений"
-								   FontSize="9"
+								   FontSize="12"
 								   TextWrapping="Wrap"
 								   HorizontalAlignment="Center"
 								   VerticalAlignment="Center"/>
@@ -253,12 +266,14 @@
 					<Button Grid.Row="0"
 							HorizontalAlignment="Left"
 							VerticalAlignment="Center"
-							Height="20"
-							Width="250"
+							Height="50"
+							Width="310"
 							CornerRadius="0"
-							Background="#e1f4c8">
+							Margin="0 3 0 0"
+							Background="#e1f4c8"
+							Name="toSixthDep">
 						<TextBlock Text="Департамент по организации корпоративов"
-								   FontSize="9"
+								   FontSize="12"
 								   TextWrapping="Wrap"
 								   HorizontalAlignment="Center"
 								   VerticalAlignment="Center"/>
@@ -276,12 +291,14 @@
 					<Button Grid.Row="0"
 							HorizontalAlignment="Left"
 							VerticalAlignment="Center"
-							Height="20"
-							Width="250"
+							Height="50"
+							Width="310"
 							CornerRadius="0"
-							Background="#e1f4c8">
+							Margin="0 3 0 0"
+							Background="#e1f4c8"
+							Name="toSeventhDep">
 						<TextBlock Text="Департамент по работе с персоналом"
-								   FontSize="9"
+								   FontSize="12"
 								   TextWrapping="Wrap"
 								   HorizontalAlignment="Center"
 								   VerticalAlignment="Center"/>
@@ -299,12 +316,14 @@
 					<Button Grid.Row="0"
 							HorizontalAlignment="Left"
 							VerticalAlignment="Center"
-							Height="20"
-							Width="250"
+							Height="50"
+							Width="310"
 							CornerRadius="0"
-							Background="#e1f4c8">
+							Margin="0 3 0 0"
+							Background="#e1f4c8"
+							Name="toEighthDep">
 						<TextBlock Text="Департамент по работе с промышленностью"
-								   FontSize="9"
+								   FontSize="12"
 								   TextWrapping="Wrap"
 								   HorizontalAlignment="Center"
 								   VerticalAlignment="Center"/>
@@ -322,12 +341,14 @@
 					<Button Grid.Row="0"
 							HorizontalAlignment="Left"
 							VerticalAlignment="Center"
-							Height="20"
-							Width="250"
+							Height="50"
+							Width="310"
 							CornerRadius="0"
-							Background="#e1f4c8">
+							Margin="0 3 0 0"
+							Background="#e1f4c8"
+							Name="toNinthDep">
 						<TextBlock Text="Департамент стратегии и планирования"
-								   FontSize="9"
+								   FontSize="12"
 								   TextWrapping="Wrap"
 								   HorizontalAlignment="Center"
 								   VerticalAlignment="Center"/>
@@ -345,12 +366,14 @@
 					<Button Grid.Row="0"
 							HorizontalAlignment="Left"
 							VerticalAlignment="Center"
-							Height="20"
-							Width="250"
+							Height="50"
+							Width="310"
 							CornerRadius="0"
-							Background="#e1f4c8">
+							Margin="0 3 0 0"
+							Background="#e1f4c8"
+							Name="toTenthDep">
 						<TextBlock Text="Управление Финансового планирования и контроля"
-								   FontSize="9"
+								   FontSize="12"
 								   TextWrapping="Wrap"
 								   HorizontalAlignment="Center"
 								   VerticalAlignment="Center"/>
@@ -368,12 +391,14 @@
 					<Button Grid.Row="0"
 							HorizontalAlignment="Left"
 							VerticalAlignment="Center"
-							Height="20"
-							Width="250"
+							Height="50"
+							Width="310"
 							CornerRadius="0"
-							Background="#e1f4c8">
+							Margin="0 3 0 0"
+							Background="#e1f4c8"
+							Name="toEleventhDep">
 						<TextBlock Text="Финансово-экономический департамент"
-								   FontSize="9"
+								   FontSize="12"
 								   TextWrapping="Wrap"
 								   HorizontalAlignment="Center"
 								   VerticalAlignment="Center"/>
@@ -391,12 +416,14 @@
 					<Button Grid.Row="0"
 							HorizontalAlignment="Left"
 							VerticalAlignment="Center"
-							Height="20"
-							Width="250"
+							Height="50"
+							Width="310"
 							CornerRadius="0"
-							Background="#e1f4c8">
+							Margin="0 3 0 0"
+							Background="#e1f4c8"
+							Name="toTwelfthDep">
 						<TextBlock Text="Юридический департамент"
-								   FontSize="9"
+								   FontSize="12"
 								   TextWrapping="Wrap"
 								   HorizontalAlignment="Center"
 								   VerticalAlignment="Center"/>
@@ -405,6 +432,7 @@
 				
 			</Grid>
 		</Border>
+		
 		<!--Диаграмма с подотделом АДМИНИСТРАТИВНЫЙ ДЕПАРТАМЕНТ-->
 		<Border Grid.Column="0"
 				Grid.Row="1"
@@ -415,23 +443,24 @@
 			<Grid RowDefinitions="*,*,*,*,*,*,*,*,*,*"
 				  ShowGridLines="False"
 				  Margin="5">
+				<Line StartPoint="0,10"
+					  EndPoint="0,630"
+					  Stroke="Black"
+					  StrokeThickness="2"
+					  Grid.RowSpan="13"/> 
 				<Button Grid.Row="0"
 						HorizontalAlignment="Left"
-						Height="20"
-						Width="180"
+						Height="50"
+						Width="310"
 						CornerRadius="0"
 						Name="toMain"
 						Background="Green">
 					<TextBlock Text="Административный департамент"
-							   FontSize="9"
+							   FontSize="12"
 							   HorizontalAlignment="Center"
 							   VerticalAlignment="Center"/>
 				</Button>
-				<Line StartPoint="0,0"
-					  EndPoint="0,320"
-					  Stroke="Black"
-					  StrokeThickness="2"
-					  Grid.RowSpan="13"/>
+				<!--Административный департамент-->
 				<DockPanel Grid.Row="1"
 						   HorizontalAlignment="Left"
 						   Margin="0 20 0 0">
@@ -443,16 +472,17 @@
 					<Button Grid.Row="0"
 							HorizontalAlignment="Left"
 							VerticalAlignment="Center"
-							Height="20"
-							Width="250"
+							Height="50"
+							Width="310"
 							CornerRadius="0"
 							Background="#e1f4c8">
 						<TextBlock Text="Административный департамент"
-								   FontSize="9"
+								   FontSize="12"
 								   HorizontalAlignment="Center"
 								   VerticalAlignment="Center"/>
 					</Button>
 				</DockPanel>
+				<!--Договорной отдел-->
 				<DockPanel Grid.Row="2"
 						   HorizontalAlignment="Left"
 						   Margin="0 20 0 0">
@@ -464,16 +494,17 @@
 					<Button Grid.Row="0"
 							HorizontalAlignment="Left"
 							VerticalAlignment="Center"
-							Height="20"
-							Width="250"
+							Height="50"
+							Width="310"
 							CornerRadius="0"
 							Background="#e1f4c8">
 						<TextBlock Text="Договорной отдел"
-								   FontSize="9"
+								   FontSize="12"
 								   HorizontalAlignment="Center"
 								   VerticalAlignment="Center"/>
 					</Button>
 				</DockPanel>
+				<!--Общий отдел-->
 				<DockPanel Grid.Row="3"
 						   HorizontalAlignment="Left"
 						   Margin="0 20 0 0">
@@ -485,16 +516,17 @@
 					<Button Grid.Row="0"
 							HorizontalAlignment="Left"
 							VerticalAlignment="Center"
-							Height="20"
-							Width="250"
+							Height="50"
+							Width="310"
 							CornerRadius="0"
 							Background="#e1f4c8">
 						<TextBlock Text="Общий отдел"
-								   FontSize="9"
+								   FontSize="12"
 								   HorizontalAlignment="Center"
 								   VerticalAlignment="Center"/>
 					</Button>
 				</DockPanel>
+				<!--Отдел закупок-->
 				<DockPanel Grid.Row="4"
 						   HorizontalAlignment="Left"
 						   Margin="0 20 0 0">
@@ -506,16 +538,17 @@
 					<Button Grid.Row="0"
 							HorizontalAlignment="Left"
 							VerticalAlignment="Center"
-							Height="20"
-							Width="250"
+							Height="50"
+							Width="310"
 							CornerRadius="0"
 							Background="#e1f4c8">
 						<TextBlock Text="Отдел закупок"
-								   FontSize="9"
+								   FontSize="12"
 								   HorizontalAlignment="Center"
 								   VerticalAlignment="Center"/>
 					</Button>
 				</DockPanel>
+				<!--Отдел протокольного сопровождения-->
 				<DockPanel Grid.Row="5"
 						   HorizontalAlignment="Left"
 						   Margin="0 20 0 0">
@@ -527,17 +560,18 @@
 					<Button Grid.Row="0"
 							HorizontalAlignment="Left"
 							VerticalAlignment="Center"
-							Height="20"
-							Width="250"
+							Height="50"
+							Width="310"
 							CornerRadius="0"
 							Background="#e1f4c8">
 						<TextBlock Text="Отдел протокольного сопровождения"
-								   FontSize="9"
+								   FontSize="12"
 								   TextWrapping="Wrap"
 								   HorizontalAlignment="Center"
 								   VerticalAlignment="Center"/>
 					</Button>
 				</DockPanel>
+				<!--Управление административно-хозяйственной деятельности-->
 				<DockPanel Grid.Row="6"
 						   HorizontalAlignment="Left"
 						   Margin="0 20 0 0">
@@ -549,18 +583,19 @@
 					<Button Grid.Row="0"
 							HorizontalAlignment="Left"
 							VerticalAlignment="Center"
-							Height="40"
-							Width="250"
+							Height="50"
+							Width="310"
 							CornerRadius="0"
 							Name="adminHoz"
 							Background="#e1f4c8">
 						<TextBlock Text="Управление административно-хозяйственной деятельности"
-								   FontSize="9"
+								   FontSize="12"
 								   TextWrapping="Wrap"
 								   HorizontalAlignment="Center"
 								   VerticalAlignment="Center"/>
 					</Button>
 				</DockPanel>
+				<!--Управление безопасности-->
 				<DockPanel Grid.Row="7"
 						   HorizontalAlignment="Left"
 						   Margin="0 20 0 0">
@@ -572,17 +607,18 @@
 					<Button Grid.Row="0"
 							HorizontalAlignment="Left"
 							VerticalAlignment="Center"
-							Height="20"
-							Width="250"
+							Height="50"
+							Width="310"
 							CornerRadius="0"
 							Background="#e1f4c8">
 						<TextBlock Text="Управление безопасности"
-								   FontSize="9"
+								   FontSize="12"
 								   TextWrapping="Wrap"
 								   HorizontalAlignment="Center"
 								   VerticalAlignment="Center"/>
 					</Button>
 				</DockPanel>
+				<!--Управление по обеспечению безопасности-->
 				<DockPanel Grid.Row="8"
 						   HorizontalAlignment="Left"
 						   Margin="0 20 0 0">
@@ -594,12 +630,12 @@
 					<Button Grid.Row="0"
 							HorizontalAlignment="Left"
 							VerticalAlignment="Center"
-							Height="20"
-							Width="250"
+							Height="50"
+							Width="310"
 							CornerRadius="0"
 							Background="#e1f4c8">
 						<TextBlock Text="Управление по обеспечению безопасности"
-								   FontSize="9"
+								   FontSize="12"
 								   TextWrapping="Wrap"
 								   HorizontalAlignment="Center"
 								   VerticalAlignment="Center"/>
@@ -608,6 +644,7 @@
 
 			</Grid>
 		</Border>
+		
 		<!--Диаграмма с подподотделом УПРАВЛЕНИЕ АДМИНИСТРАТИВНО-ХОХЯЙСТВЕННОЙ ДЕЯТЕЛЬНОСТИ (1.6.1)-->
 		<Border Grid.Column="0"
 				Grid.Row="1"
@@ -618,26 +655,26 @@
 			<Grid RowDefinitions="*,*,*"
 				  ShowGridLines="True"
 				  Margin="5">
+				<Line StartPoint="0,95"
+					  EndPoint="0,620"
+					  Stroke="Black"
+					  StrokeThickness="2"
+					  Grid.Row="0"
+					  Grid.RowSpan="3"/>
 				<Button Grid.Row="0"
 						HorizontalAlignment="Left"
-						Height="40"
-						Width="180"
+						Height="50"
+						Width="310"
 						CornerRadius="0"
 						Background="Green"
 						Name="toFirst">
 					<TextBlock Text="Управление административно-хозяйственной деятельности"
 							   TextWrapping="Wrap"
-							   FontSize="9"
+							   FontSize="12"
 							   HorizontalAlignment="Center"
 							   VerticalAlignment="Center"/>
 				</Button>
-				<Line StartPoint="0,0"
-					  EndPoint="0,245"
-					  Stroke="Black"
-					  StrokeThickness="2"
-					  Grid.Row="0"
-					  Grid.RowSpan="3"
-					  VerticalAlignment="Center"/>
+				<!--Отдел ИТ-->
 				<DockPanel Grid.Row="1"
 						   HorizontalAlignment="Left"
 						   Margin="0 20 0 0">
@@ -649,16 +686,17 @@
 					<Button Grid.Row="0"
 							HorizontalAlignment="Left"
 							VerticalAlignment="Center"
-							Height="20"
-							Width="250"
+							Height="50"
+							Width="310"
 							CornerRadius="0"
 							Background="#e1f4c8">
 						<TextBlock Text="Отдел ИТ"
-								   FontSize="9"
+								   FontSize="12"
 								   HorizontalAlignment="Center"
 								   VerticalAlignment="Center"/>
 					</Button>
 				</DockPanel>
+				<!--Управление административно-хозяйственной деятельности-->
 				<DockPanel Grid.Row="2"
 						   HorizontalAlignment="Left"
 						   Margin="0 20 0 0">
@@ -670,13 +708,137 @@
 					<Button Grid.Row="0"
 							HorizontalAlignment="Left"
 							VerticalAlignment="Center"
-							Height="40"
-							Width="250"
+							Height="50"
+							Width="310"
 							CornerRadius="0"
 							Background="#e1f4c8">
 						<TextBlock Text="Управление административно-хозяйственной деятельности"
 								   TextWrapping="Wrap"
-								   FontSize="9"
+								   FontSize="12"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+				</DockPanel>
+
+			</Grid>
+		</Border>
+
+		<!--Академия Умные дороги-->
+		<Border Grid.Column="0"
+				Grid.Row="1"
+				Background="LightGray"
+				Margin="15"
+				Name="secondDep"
+				IsVisible="False">
+			<Grid RowDefinitions="*,*,*,*,*"
+				  ShowGridLines="True"
+				  Margin="5">
+				<Line StartPoint="0,48"
+					  EndPoint="0,670"
+					  Stroke="Black"
+					  StrokeThickness="2"
+					  Grid.Row="0"
+					  Grid.RowSpan="5"/>
+				<Button Grid.Row="0"
+						HorizontalAlignment="Left"
+						Height="50"
+						Width="310"
+						CornerRadius="0"
+						Background="Green"
+						Name="toMain2">
+					<TextBlock Text="Академия Умные дороги"
+							   TextWrapping="Wrap"
+							   FontSize="12"
+							   HorizontalAlignment="Center"
+							   VerticalAlignment="Center"/>
+				</Button>
+				<!--Академия Умные дороги-->
+				<DockPanel Grid.Row="1"
+						   HorizontalAlignment="Left"
+						   Margin="0 20 0 0">
+					<Line StartPoint="50,0"
+						  EndPoint="0,0"
+						  Stroke="Black"
+						  StrokeThickness="2"
+						  VerticalAlignment="Center"/>
+					<Button Grid.Row="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Height="50"
+							Width="310"
+							CornerRadius="0"
+							Background="#e1f4c8">
+						<TextBlock Text="Академия Умные дороги"
+								   FontSize="12"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+				</DockPanel>
+				<!--Отдел сетевых программ-->
+				<DockPanel Grid.Row="2"
+						   HorizontalAlignment="Left"
+						   Margin="0 20 0 0">
+					<Line StartPoint="50,0"
+						  EndPoint="0,0"
+						  Stroke="Black"
+						  StrokeThickness="2"
+						  VerticalAlignment="Center"/>
+					<Button Grid.Row="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Height="50"
+							Width="310"
+							CornerRadius="0"
+							Background="#e1f4c8">
+						<TextBlock Text="Отдел сетевых программ"
+								   TextWrapping="Wrap"
+								   FontSize="12"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+				</DockPanel>
+				<!--Проектно-аналитический отдел-->
+				<DockPanel Grid.Row="3"
+						   HorizontalAlignment="Left"
+						   Margin="0 20 0 0">
+					<Line StartPoint="50,0"
+						  EndPoint="0,0"
+						  Stroke="Black"
+						  StrokeThickness="2"
+						  VerticalAlignment="Center"/>
+					<Button Grid.Row="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Height="50"
+							Width="310"
+							CornerRadius="0"
+							Background="#e1f4c8">
+						<TextBlock Text="Проектно-аналитический отдел"
+								   TextWrapping="Wrap"
+								   FontSize="12"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+				</DockPanel>
+				<!--Учебно-организационный отдел-->
+				<DockPanel Grid.Row="4"
+						   HorizontalAlignment="Left"
+						   Margin="0 20 0 0">
+					<Line StartPoint="50,0"
+						  EndPoint="0,0"
+						  Stroke="Black"
+						  StrokeThickness="2"
+						  VerticalAlignment="Center"/>
+					<Button Grid.Row="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Height="50"
+							Width="310"
+							CornerRadius="0"
+							Background="#e1f4c8">
+						<TextBlock Text="Учебно-организационный отдел"
+								   TextWrapping="Wrap"
+								   FontSize="12"
 								   HorizontalAlignment="Center"
 								   VerticalAlignment="Center"/>
 					</Button>
