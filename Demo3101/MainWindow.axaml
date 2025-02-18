@@ -731,7 +731,7 @@
 				Name="secondDep"
 				IsVisible="False">
 			<Grid RowDefinitions="*,*,*,*,*"
-				  ShowGridLines="True"
+				  ShowGridLines="False"
 				  Margin="5">
 				<Line StartPoint="0,48"
 					  EndPoint="0,670"
@@ -767,7 +767,8 @@
 							Height="50"
 							Width="310"
 							CornerRadius="0"
-							Background="#e1f4c8">
+							Background="#e1f4c8"
+							Name="smartRoads">
 						<TextBlock Text="Академия Умные дороги"
 								   FontSize="12"
 								   HorizontalAlignment="Center"
@@ -789,7 +790,8 @@
 							Height="50"
 							Width="310"
 							CornerRadius="0"
-							Background="#e1f4c8">
+							Background="#e1f4c8"
+							Name="depNetProg">
 						<TextBlock Text="Отдел сетевых программ"
 								   TextWrapping="Wrap"
 								   FontSize="12"
@@ -812,7 +814,8 @@
 							Height="50"
 							Width="310"
 							CornerRadius="0"
-							Background="#e1f4c8">
+							Background="#e1f4c8"
+							Name="depProjectAnalitic">
 						<TextBlock Text="Проектно-аналитический отдел"
 								   TextWrapping="Wrap"
 								   FontSize="12"
@@ -835,7 +838,8 @@
 							Height="50"
 							Width="310"
 							CornerRadius="0"
-							Background="#e1f4c8">
+							Background="#e1f4c8"
+							Name="depEdOrg">
 						<TextBlock Text="Учебно-организационный отдел"
 								   TextWrapping="Wrap"
 								   FontSize="12"
@@ -846,6 +850,290 @@
 
 			</Grid>
 		</Border>
+		
+		<!--Департамент коммуникаций-->
+		<Border Grid.Column="0"
+				Grid.Row="1"
+				Background="LightGray"
+				Margin="15"
+				Name="fourthDep"
+				IsVisible="False">
+			<Grid RowDefinitions="*,*,*,*"
+				  ShowGridLines="False"
+				  Margin="5">
+				<Line StartPoint="0,65"
+					  EndPoint="0,650"
+					  Stroke="Black"
+					  StrokeThickness="2"
+					  Grid.Row="0"
+					  Grid.RowSpan="4"/>
+				<Button Grid.Row="0"
+						HorizontalAlignment="Left"
+						Height="50"
+						Width="310"
+						CornerRadius="0"
+						Background="Green"
+						Name="toMain3">
+					<TextBlock Text="Департамент коммуникаций"
+							   TextWrapping="Wrap"
+							   FontSize="12"
+							   HorizontalAlignment="Center"
+							   VerticalAlignment="Center"/>
+				</Button>
+				<!--Департамент коммуникаций-->
+				<DockPanel Grid.Row="1"
+						   HorizontalAlignment="Left"
+						   Margin="0 20 0 0">
+					<Line StartPoint="50,0"
+						  EndPoint="0,0"
+						  Stroke="Black"
+						  StrokeThickness="2"
+						  VerticalAlignment="Center"/>
+					<Button Grid.Row="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Height="50"
+							Width="310"
+							CornerRadius="0"
+							Background="#e1f4c8"
+							Name="depCom">
+						<TextBlock Text="Департамент коммуникаций"
+								   FontSize="12"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+				</DockPanel>
+				<!--Управление по PR-проектам-->
+				<DockPanel Grid.Row="2"
+						   HorizontalAlignment="Left"
+						   Margin="0 20 0 0">
+					<Line StartPoint="50,0"
+						  EndPoint="0,0"
+						  Stroke="Black"
+						  StrokeThickness="2"
+						  VerticalAlignment="Center"/>
+					<Button Grid.Row="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Height="50"
+							Width="310"
+							CornerRadius="0"
+							Background="#e1f4c8"
+							Name="toFourthPodDep">
+						<TextBlock Text="Управление по PR-проектам"
+								   TextWrapping="Wrap"
+								   FontSize="12"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+				</DockPanel>
+				<!--Управление Пресс-службы-->
+				<DockPanel Grid.Row="3"
+						   HorizontalAlignment="Left"
+						   Margin="0 20 0 0">
+					<Line StartPoint="50,0"
+						  EndPoint="0,0"
+						  Stroke="Black"
+						  StrokeThickness="2"
+						  VerticalAlignment="Center"/>
+					<Button Grid.Row="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Height="50"
+							Width="310"
+							CornerRadius="0"
+							Background="#e1f4c8"
+							Name="toFourthPodDepTwo">
+						<TextBlock Text="Управление Пресс-службы"
+								   TextWrapping="Wrap"
+								   FontSize="12"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+				</DockPanel>
+			</Grid>
+		</Border>
+		<!--Управление по PR-проектам-->
+		<Border Grid.Column="0"
+				Grid.Row="1"
+				Background="LightGray"
+				Margin="15"
+				Name="fourthPod"
+				IsVisible="False">
+			<Grid RowDefinitions="*,*,*"
+				  ShowGridLines="False"
+				  Margin="3">
+				<Line StartPoint="0,96"
+					  EndPoint="0,625"
+					  Stroke="Black"
+					  StrokeThickness="2"
+					  Grid.Row="0"
+					  Grid.RowSpan="4"/>
+				<Button Grid.Row="0"
+						HorizontalAlignment="Left"
+						Height="50"
+						Width="310"
+						CornerRadius="0"
+						Background="Green"
+						Name="toMain4">
+					<TextBlock Text="Управление по PR-проектам"
+							   TextWrapping="Wrap"
+							   FontSize="12"
+							   HorizontalAlignment="Center"
+							   VerticalAlignment="Center"/>
+				</Button>
+				<!--Отдел по организации и сопровождению мероприятий-->
+				<DockPanel Grid.Row="1"
+						   HorizontalAlignment="Left"
+						   Margin="0 20 0 0">
+					<Line StartPoint="50,0"
+						  EndPoint="0,0"
+						  Stroke="Black"
+						  StrokeThickness="2"
+						  VerticalAlignment="Center"/>
+					<Button Grid.Row="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Height="50"
+							Width="310"
+							CornerRadius="0"
+							Background="#e1f4c8"
+							Name="fourthPodDep">
+						<TextBlock Text="Отдел по организации и сопровождению мероприятий"
+								   FontSize="12"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+				</DockPanel>
+				<!--Отдел по работе с корпорациями-->
+				<DockPanel Grid.Row="2"
+						   HorizontalAlignment="Left"
+						   Margin="0 20 0 0">
+					<Line StartPoint="50,0"
+						  EndPoint="0,0"
+						  Stroke="Black"
+						  StrokeThickness="2"
+						  VerticalAlignment="Center"/>
+					<Button Grid.Row="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Height="50"
+							Width="310"
+							CornerRadius="0"
+							Background="#e1f4c8"
+							Name="fourthPodDepTwo">
+						<TextBlock Text="Отдел по работе с корпорациями"
+								   TextWrapping="Wrap"
+								   FontSize="12"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+				</DockPanel>
+			</Grid>
+		</Border>
+		<!--Управление Пресс-службы-->
+		<Border Grid.Column="0"
+				Grid.Row="1"
+				Background="LightGray"
+				Margin="15"
+				Name="Press"
+				IsVisible="False">
+			<Grid RowDefinitions="*,*,*,*"
+				  ShowGridLines="False"
+				  Margin="3">
+				<Line StartPoint="0,66"
+					  EndPoint="0,655"
+					  Stroke="Black"
+					  StrokeThickness="2"
+					  Grid.Row="0"
+					  Grid.RowSpan="4"/>
+				<Button Grid.Row="0"
+						HorizontalAlignment="Left"
+						Height="50"
+						Width="310"
+						CornerRadius="0"
+						Background="Green"
+						Name="toMain5">
+					<TextBlock Text="Управление Пресс-службы"
+							   TextWrapping="Wrap"
+							   FontSize="12"
+							   HorizontalAlignment="Center"
+							   VerticalAlignment="Center"/>
+				</Button>
+				<!--Отдел по работе со СМИ-->
+				<DockPanel Grid.Row="1"
+						   HorizontalAlignment="Left"
+						   Margin="0 20 0 0">
+					<Line StartPoint="50,0"
+						  EndPoint="0,0"
+						  Stroke="Black"
+						  StrokeThickness="2"
+						  VerticalAlignment="Center"/>
+					<Button Grid.Row="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Height="50"
+							Width="310"
+							CornerRadius="0"
+							Background="#e1f4c8"
+							Name="depToWorkWithMedia">
+						<TextBlock Text="Отдел по работе со СМИ"
+								   FontSize="12"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+				</DockPanel>
+				<!--Отдел цифровых коммуникаций-->
+				<DockPanel Grid.Row="2"
+						   HorizontalAlignment="Left"
+						   Margin="0 20 0 0">
+					<Line StartPoint="50,0"
+						  EndPoint="0,0"
+						  Stroke="Black"
+						  StrokeThickness="2"
+						  VerticalAlignment="Center"/>
+					<Button Grid.Row="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Height="50"
+							Width="310"
+							CornerRadius="0"
+							Background="#e1f4c8"
+							Name="depDigitalCom">
+						<TextBlock Text="Отдел цифровых коммуникаций"
+								   TextWrapping="Wrap"
+								   FontSize="12"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+				</DockPanel>
+				<!--Управление Пресс-службы-->
+				<DockPanel Grid.Row="3"
+						   HorizontalAlignment="Left"
+						   Margin="0 20 0 0">
+					<Line StartPoint="50,0"
+						  EndPoint="0,0"
+						  Stroke="Black"
+						  StrokeThickness="2"
+						  VerticalAlignment="Center"/>
+					<Button Grid.Row="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Height="50"
+							Width="310"
+							CornerRadius="0"
+							Background="#e1f4c8"
+							Name="depPress">
+						<TextBlock Text="Управление Пресс-службы"
+								   TextWrapping="Wrap"
+								   FontSize="12"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+				</DockPanel>
+			</Grid>
+		</Border>
+		
 		
 	</Grid>
 </Window>
