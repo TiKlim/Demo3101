@@ -2,11 +2,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="1300" d:DesignHeight="850"
+        mc:Ignorable="d" d:DesignWidth="1500" d:DesignHeight="850"
 		MinHeight="850"
-		MinWidth="1300"
+		MinWidth="1500"
 		MaxHeight="850"
-		MaxWidth="1300"
+		MaxWidth="1500"
 		WindowStartupLocation="CenterScreen"
         x:Class="Demo3101.MainWindow"
 		x:CompileBindings="False"
@@ -54,9 +54,10 @@
 								<Grid RowDefinitions="*,*,*,*">
 									<DockPanel Grid.Row="0"
 											   Margin="15 15 0 0">
-										<TextBlock Text="{Binding Iddepats.DivisionName}"/>
+										<TextBlock Text="{Binding GetNameDivision}"></TextBlock>		
 										<TextBlock Text=" - "/>
-										<TextBlock Text="{Binding Idroles.PostName}"/>
+										<TextBlock Text="{Binding GetNameRole}"
+												   TextWrapping="Wrap"/>
 									</DockPanel>
 									<TextBlock Text="{Binding Iddepats.DivisionName}"
 											   Grid.Row="0"
@@ -103,7 +104,7 @@
 				</Button>
 			</Grid>
 		</Border>
-		<!--Диаграмма с отделами-->
+		<!--Левая сторона - диаграмма с отделами-->
 		<Border Grid.Column="0"
 				Grid.Row="1"
 				Background="LightGray"
@@ -475,7 +476,8 @@
 							Height="50"
 							Width="310"
 							CornerRadius="0"
-							Background="#e1f4c8">
+							Background="#e1f4c8"
+							Name="adminDepart">
 						<TextBlock Text="Административный департамент"
 								   FontSize="12"
 								   HorizontalAlignment="Center"
@@ -1133,7 +1135,632 @@
 				</DockPanel>
 			</Grid>
 		</Border>
-		
-		
+
+		<!--Департамент маркетинга и партнерских отношений-->
+		<Border Grid.Column="0"
+				Grid.Row="1"
+				Background="LightGray"
+				Margin="15"
+				Name="depMarkAndPart"
+				IsVisible="False">
+			<Grid RowDefinitions="*,*,*,*,*"
+				  ShowGridLines="False"
+				  Margin="3">
+				<Line StartPoint="0,48"
+					  EndPoint="0,670"
+					  Stroke="Black"
+					  StrokeThickness="2"
+					  Grid.Row="0"
+					  Grid.RowSpan="5"/>
+				<Button Grid.Row="0"
+						HorizontalAlignment="Left"
+						Height="50"
+						Width="310"
+						CornerRadius="0"
+						Background="Green"
+						Name="toMain6">
+					<TextBlock Text="Департамент маркетинга и партнерских отношений"
+							   TextWrapping="Wrap"
+							   FontSize="12"
+							   HorizontalAlignment="Center"
+							   VerticalAlignment="Center"/>
+				</Button>
+				<!--Департамент маркетинга и партнерских отношений-->
+				<DockPanel Grid.Row="1"
+						   HorizontalAlignment="Left"
+						   Margin="0 20 0 0">
+					<Line StartPoint="50,0"
+						  EndPoint="0,0"
+						  Stroke="Black"
+						  StrokeThickness="2"
+						  VerticalAlignment="Center"/>
+					<Button Grid.Row="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Height="50"
+							Width="310"
+							CornerRadius="0"
+							Background="#e1f4c8"
+							Name="depMarketingAndPartner">
+						<TextBlock Text="Департамент маркетинга и партнерских отношений"
+								   FontSize="12"
+								   TextWrapping="Wrap"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+				</DockPanel>
+				<!--Управление маркетинга-->
+				<DockPanel Grid.Row="2"
+						   HorizontalAlignment="Left"
+						   Margin="0 20 0 0">
+					<Line StartPoint="50,0"
+						  EndPoint="0,0"
+						  Stroke="Black"
+						  StrokeThickness="2"
+						  VerticalAlignment="Center"/>
+					<Button Grid.Row="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Height="50"
+							Width="310"
+							CornerRadius="0"
+							Background="#e1f4c8"
+							Name="depMarketing">
+						<TextBlock Text="Управление маркетинга"
+								   TextWrapping="Wrap"
+								   FontSize="12"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+				</DockPanel>
+				<!--Управление по развитию бизнеса-->
+				<DockPanel Grid.Row="3"
+						   HorizontalAlignment="Left"
+						   Margin="0 20 0 0">
+					<Line StartPoint="50,0"
+						  EndPoint="0,0"
+						  Stroke="Black"
+						  StrokeThickness="2"
+						  VerticalAlignment="Center"/>
+					<Button Grid.Row="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Height="50"
+							Width="310"
+							CornerRadius="0"
+							Background="#e1f4c8"
+							Name="depBusiness">
+						<TextBlock Text="Управление по развитию бизнеса"
+								   TextWrapping="Wrap"
+								   FontSize="12"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+				</DockPanel>
+				<!--Управление по развитию партнерских отношений-->
+				<DockPanel Grid.Row="4"
+						   HorizontalAlignment="Left"
+						   Margin="0 20 0 0">
+					<Line StartPoint="50,0"
+						  EndPoint="0,0"
+						  Stroke="Black"
+						  StrokeThickness="2"
+						  VerticalAlignment="Center"/>
+					<Button Grid.Row="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Height="50"
+							Width="310"
+							CornerRadius="0"
+							Background="#e1f4c8"
+							Name="depPartner">
+						<TextBlock Text="Управление по развитию партнерских отношений"
+								   TextWrapping="Wrap"
+								   FontSize="12"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+				</DockPanel>
+			</Grid>
+		</Border>
+		<!--Управление маркетинга-->
+		<Border Grid.Column="0"
+				Grid.Row="1"
+				Background="LightGray"
+				Margin="15"
+				Name="depMark"
+				IsVisible="False">
+			<Grid RowDefinitions="*,*,*"
+				  ShowGridLines="False"
+				  Margin="3">
+				<Line StartPoint="0,98"
+					  EndPoint="0,625"
+					  Stroke="Black"
+					  StrokeThickness="2"
+					  Grid.Row="0"
+					  Grid.RowSpan="3"/>
+				<Button Grid.Row="0"
+						HorizontalAlignment="Left"
+						Height="50"
+						Width="310"
+						CornerRadius="0"
+						Background="Green"
+						Name="toMain7">
+					<TextBlock Text="Управление маркетинга"
+							   TextWrapping="Wrap"
+							   FontSize="12"
+							   HorizontalAlignment="Center"
+							   VerticalAlignment="Center"/>
+				</Button>
+				<!--Лицензионный отдел-->
+				<DockPanel Grid.Row="1"
+						   HorizontalAlignment="Left"
+						   Margin="0 20 0 0">
+					<Line StartPoint="50,0"
+						  EndPoint="0,0"
+						  Stroke="Black"
+						  StrokeThickness="2"
+						  VerticalAlignment="Center"/>
+					<Button Grid.Row="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Height="50"
+							Width="310"
+							CornerRadius="0"
+							Background="#e1f4c8"
+							Name="depLicense">
+						<TextBlock Text="Лицензионный отдел"
+								   FontSize="12"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+				</DockPanel>
+				<!--Управление маркетинга-->
+				<DockPanel Grid.Row="2"
+						   HorizontalAlignment="Left"
+						   Margin="0 20 0 0">
+					<Line StartPoint="50,0"
+						  EndPoint="0,0"
+						  Stroke="Black"
+						  StrokeThickness="2"
+						  VerticalAlignment="Center"/>
+					<Button Grid.Row="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Height="50"
+							Width="310"
+							CornerRadius="0"
+							Background="#e1f4c8"
+							Name="upravMarketing">
+						<TextBlock Text="Управление маркетинга"
+								   TextWrapping="Wrap"
+								   FontSize="12"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+				</DockPanel>
+			</Grid>
+		</Border>
+		<!--Управление по развитию бизнеса-->
+		<Border Grid.Column="0"
+				Grid.Row="1"
+				Background="LightGray"
+				Margin="15"
+				Name="depBus"
+				IsVisible="False">
+			<Grid RowDefinitions="*,*,*"
+				  ShowGridLines="False"
+				  Margin="3">
+				<Line StartPoint="0,98"
+					  EndPoint="0,625"
+					  Stroke="Black"
+					  StrokeThickness="2"
+					  Grid.Row="0"
+					  Grid.RowSpan="3"/>
+				<Button Grid.Row="0"
+						HorizontalAlignment="Left"
+						Height="50"
+						Width="310"
+						CornerRadius="0"
+						Background="Green"
+						Name="toMain8">
+					<TextBlock Text="Управление по развитию бизнеса"
+							   TextWrapping="Wrap"
+							   FontSize="12"
+							   HorizontalAlignment="Center"
+							   VerticalAlignment="Center"/>
+				</Button>
+				<!--Отдел по привлечению новых клиентов-->
+				<DockPanel Grid.Row="1"
+						   HorizontalAlignment="Left"
+						   Margin="0 20 0 0">
+					<Line StartPoint="50,0"
+						  EndPoint="0,0"
+						  Stroke="Black"
+						  StrokeThickness="2"
+						  VerticalAlignment="Center"/>
+					<Button Grid.Row="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Height="50"
+							Width="310"
+							CornerRadius="0"
+							Background="#e1f4c8"
+							Name="depNewClients">
+						<TextBlock Text="Отдел по привлечению новых клиентов"
+								   FontSize="12"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+				</DockPanel>
+				<!--Отдел по организации мероприятий-->
+				<DockPanel Grid.Row="2"
+						   HorizontalAlignment="Left"
+						   Margin="0 20 0 0">
+					<Line StartPoint="50,0"
+						  EndPoint="0,0"
+						  Stroke="Black"
+						  StrokeThickness="2"
+						  VerticalAlignment="Center"/>
+					<Button Grid.Row="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Height="50"
+							Width="310"
+							CornerRadius="0"
+							Background="#e1f4c8"
+							Name="depMeetings">
+						<TextBlock Text="Отдел по организации мероприятий"
+								   TextWrapping="Wrap"
+								   FontSize="12"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+				</DockPanel>
+			</Grid>
+		</Border>
+
+		<!--Департамент стратегии и планирования-->
+		<Border Grid.Column="0"
+				Grid.Row="1"
+				Background="LightGray"
+				Margin="15"
+				Name="depStrategAndPlan"
+				IsVisible="False">
+			<Grid RowDefinitions="*,*,*"
+				  ShowGridLines="False"
+				  Margin="3">
+				<Line StartPoint="0,98"
+					  EndPoint="0,625"
+					  Stroke="Black"
+					  StrokeThickness="2"
+					  Grid.Row="0"
+					  Grid.RowSpan="3"/>
+				<Button Grid.Row="0"
+						HorizontalAlignment="Left"
+						Height="50"
+						Width="310"
+						CornerRadius="0"
+						Background="Green"
+						Name="toMain9">
+					<TextBlock Text="Департамент стратегии и планирования"
+							   TextWrapping="Wrap"
+							   FontSize="12"
+							   HorizontalAlignment="Center"
+							   VerticalAlignment="Center"/>
+				</Button>
+				<!--Аналитический отдел-->
+				<DockPanel Grid.Row="1"
+						   HorizontalAlignment="Left"
+						   Margin="0 20 0 0">
+					<Line StartPoint="50,0"
+						  EndPoint="0,0"
+						  Stroke="Black"
+						  StrokeThickness="2"
+						  VerticalAlignment="Center"/>
+					<Button Grid.Row="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Height="50"
+							Width="310"
+							CornerRadius="0"
+							Background="#e1f4c8"
+							Name="depAnalytic">
+						<TextBlock Text="Аналитический отдел"
+								   FontSize="12"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+				</DockPanel>
+				<!--Отдел проектного управления-->
+				<DockPanel Grid.Row="2"
+						   HorizontalAlignment="Left"
+						   Margin="0 20 0 0">
+					<Line StartPoint="50,0"
+						  EndPoint="0,0"
+						  Stroke="Black"
+						  StrokeThickness="2"
+						  VerticalAlignment="Center"/>
+					<Button Grid.Row="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Height="50"
+							Width="310"
+							CornerRadius="0"
+							Background="#e1f4c8"
+							Name="depProject ">
+						<TextBlock Text="Отдел проектного управления"
+								   TextWrapping="Wrap"
+								   FontSize="12"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+				</DockPanel>
+			</Grid>
+		</Border>
+
+		<!--Финансово-экономический департамент-->
+		<Border Grid.Column="0"
+				Grid.Row="1"
+				Background="LightGray"
+				Margin="15"
+				Name="depFinEc"
+				IsVisible="False">
+			<Grid RowDefinitions="*,*,*,*,*"
+				  ShowGridLines="False"
+				  Margin="3">
+				<Line StartPoint="0,48"
+					  EndPoint="0,670"
+					  Stroke="Black"
+					  StrokeThickness="2"
+					  Grid.Row="0"
+					  Grid.RowSpan="5"/>
+				<Button Grid.Row="0"
+						HorizontalAlignment="Left"
+						Height="50"
+						Width="310"
+						CornerRadius="0"
+						Background="Green"
+						Name="toMain11">
+					<TextBlock Text="Финансово-экономический департамент"
+							   TextWrapping="Wrap"
+							   FontSize="12"
+							   HorizontalAlignment="Center"
+							   VerticalAlignment="Center"/>
+				</Button>
+				<!--Управление бухгалтерского и налогового учета-->
+				<DockPanel Grid.Row="1"
+						   HorizontalAlignment="Left"
+						   Margin="0 20 0 0">
+					<Line StartPoint="50,0"
+						  EndPoint="0,0"
+						  Stroke="Black"
+						  StrokeThickness="2"
+						  VerticalAlignment="Center"/>
+					<Button Grid.Row="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Height="50"
+							Width="310"
+							CornerRadius="0"
+							Background="#e1f4c8"
+							Name="buhNagManag">
+						<TextBlock Text="Управление бухгалтерского и налогового учета"
+								   FontSize="12"
+								   TextWrapping="Wrap"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+				</DockPanel>
+				<!--Управление казначейства-->
+				<DockPanel Grid.Row="2"
+						   HorizontalAlignment="Left"
+						   Margin="0 20 0 0">
+					<Line StartPoint="50,0"
+						  EndPoint="0,0"
+						  Stroke="Black"
+						  StrokeThickness="2"
+						  VerticalAlignment="Center"/>
+					<Button Grid.Row="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Height="50"
+							Width="310"
+							CornerRadius="0"
+							Background="#e1f4c8"
+							Name="kaznaManag">
+						<TextBlock Text="Управление казначейства"
+								   TextWrapping="Wrap"
+								   FontSize="12"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+				</DockPanel>
+				<!--Финансово-экономический департамент-->
+				<DockPanel Grid.Row="3"
+						   HorizontalAlignment="Left"
+						   Margin="0 20 0 0">
+					<Line StartPoint="50,0"
+						  EndPoint="0,0"
+						  Stroke="Black"
+						  StrokeThickness="2"
+						  VerticalAlignment="Center"/>
+					<Button Grid.Row="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Height="50"
+							Width="310"
+							CornerRadius="0"
+							Background="#e1f4c8"
+							Name="finEcDep">
+						<TextBlock Text="Финансово-экономический департамент"
+								   TextWrapping="Wrap"
+								   FontSize="12"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+				</DockPanel>
+				<!--Финансово-экономическое управление-->
+				<DockPanel Grid.Row="4"
+						   HorizontalAlignment="Left"
+						   Margin="0 20 0 0">
+					<Line StartPoint="50,0"
+						  EndPoint="0,0"
+						  Stroke="Black"
+						  StrokeThickness="2"
+						  VerticalAlignment="Center"/>
+					<Button Grid.Row="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Height="50"
+							Width="310"
+							CornerRadius="0"
+							Background="#e1f4c8"
+							Name="finEcManag">
+						<TextBlock Text="Финансово-экономическое управление"
+								   TextWrapping="Wrap"
+								   FontSize="12"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+				</DockPanel>
+			</Grid>
+		</Border>
+		<!--Управление казначейства-->
+		<Border Grid.Column="0"
+				Grid.Row="1"
+				Background="LightGray"
+				Margin="15"
+				Name="depKazna"
+				IsVisible="False">
+			<Grid RowDefinitions="*,*,*,*,*"
+				  ShowGridLines="False"
+				  Margin="3">
+				<Line StartPoint="0,48"
+					  EndPoint="0,230"
+					  Stroke="Black"
+					  StrokeThickness="2"
+					  Grid.Row="0"
+					  Grid.RowSpan="5"/>
+				<Button Grid.Row="0"
+						HorizontalAlignment="Left"
+						Height="50"
+						Width="310"
+						CornerRadius="0"
+						Background="Green"
+						Name="toMain12">
+					<TextBlock Text="Управление казначейства"
+							   TextWrapping="Wrap"
+							   FontSize="12"
+							   HorizontalAlignment="Center"
+							   VerticalAlignment="Center"/>
+				</Button>
+				<!--Операционный отдел-->
+				<DockPanel Grid.Row="1"
+						   HorizontalAlignment="Left"
+						   Margin="0 20 0 0">
+					<Line StartPoint="50,0"
+						  EndPoint="0,0"
+						  Stroke="Black"
+						  StrokeThickness="2"
+						  VerticalAlignment="Center"/>
+					<Button Grid.Row="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Height="50"
+							Width="310"
+							CornerRadius="0"
+							Background="#e1f4c8"
+							Name="depOperation">
+						<TextBlock Text="Операционный отдел"
+								   FontSize="12"
+								   TextWrapping="Wrap"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+				</DockPanel>
+			</Grid>
+		</Border>
+
+		<!--Юридический департамент-->
+		<Border Grid.Column="0"
+				Grid.Row="1"
+				Background="LightGray"
+				Margin="15"
+				Name="lawDep"
+				IsVisible="False">
+			<Grid RowDefinitions="*,*,*"
+				  ShowGridLines="False"
+				  Margin="3">
+				<Line StartPoint="0,98"
+					  EndPoint="0,625"
+					  Stroke="Black"
+					  StrokeThickness="2"
+					  Grid.Row="0"
+					  Grid.RowSpan="3"/>
+				<Button Grid.Row="0"
+						HorizontalAlignment="Left"
+						Height="50"
+						Width="310"
+						CornerRadius="0"
+						Background="Green"
+						Name="toMain13">
+					<TextBlock Text="Юридический департамент"
+							   TextWrapping="Wrap"
+							   FontSize="12"
+							   HorizontalAlignment="Center"
+							   VerticalAlignment="Center"/>
+				</Button>
+				<!--Управление нормативного обеспечения и договорной работы-->
+				<DockPanel Grid.Row="1"
+						   HorizontalAlignment="Left"
+						   Margin="0 20 0 0">
+					<Line StartPoint="50,0"
+						  EndPoint="0,0"
+						  Stroke="Black"
+						  StrokeThickness="2"
+						  VerticalAlignment="Center"/>
+					<Button Grid.Row="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Height="50"
+							Width="310"
+							CornerRadius="0"
+							Background="#e1f4c8"
+							Name="standartManag">
+						<TextBlock Text="Управление нормативного обеспечения и договорной работы"
+								   FontSize="12"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+				</DockPanel>
+				<!--Юридический департамент-->
+				<DockPanel Grid.Row="2"
+						   HorizontalAlignment="Left"
+						   Margin="0 20 0 0">
+					<Line StartPoint="50,0"
+						  EndPoint="0,0"
+						  Stroke="Black"
+						  StrokeThickness="2"
+						  VerticalAlignment="Center"/>
+					<Button Grid.Row="0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Height="50"
+							Width="310"
+							CornerRadius="0"
+							Background="#e1f4c8"
+							Name="depLaw">
+						<TextBlock Text="Юридический департамент"
+								   TextWrapping="Wrap"
+								   FontSize="12"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"/>
+					</Button>
+				</DockPanel>
+			</Grid>
+		</Border>
+
+
 	</Grid>
 </Window>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Demo3101.Models;
 
@@ -20,6 +21,21 @@ public partial class Staff
     public int? StaffOffice { get; set; }
 
     public string? CorporateEmail { get; set; }
+
+    public string GetNameDivision { 
+        get
+        {
+            return Iddepats.FirstOrDefault()!.DivisionName!;
+        }
+    }
+
+    public string GetNameRole
+    {
+        get 
+        {
+            return Idroles.FirstOrDefault()!.PostName!;
+        }
+    }
 
     public virtual Office? StaffOfficeNavigation { get; set; }
 
