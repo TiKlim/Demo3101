@@ -3,13 +3,16 @@ using Avalonia.Media;
 using Avalonia.Styling;
 using Avalonia.VisualTree;
 using Demo3101.Context;
+using Demo3101.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Demo3101
 {
     public partial class MainWindow : Window
     {
+        private List<Staff> staffs;
         public MainWindow()
         {
             InitializeComponent();
@@ -70,8 +73,17 @@ namespace Demo3101
             depLaw.Click += DepLaw_Click;
             toMain13.Click += ToMain13_Click;
             adminDepart.Click += AdminDepart_Click;
+            add.Click += Add_Click;
             SetData();
         }
+
+        private void Add_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            EditAddWindow editAddWindow = new EditAddWindow();
+            editAddWindow.Show();
+            Effect = new BlurEffect { Radius = 10 };
+            IsHitTestVisible = false;
+        } 
 
         private void AdminDepart_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {

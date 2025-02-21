@@ -93,14 +93,15 @@
 				<Button Grid.Row="1"
 						Background="#e1f4c8"
 						CornerRadius="0"
-						Height="70"
-						Width="70"
+						Height="100"
+						Width="100"
 						HorizontalAlignment="Right"
-						Margin="5">
+						Margin="5"
+						Name="add">
 					<TextBlock Text="+"
 							   HorizontalAlignment="Center"
 							   VerticalAlignment="Center"
-							   FontSize="40"/>
+							   FontSize="50"/>
 				</Button>
 			</Grid>
 		</Border>
@@ -127,7 +128,8 @@
 						Margin="0 3 0 0"
 						CornerRadius="0"
 						Background="Green"
-						Name="mainButton">
+						Name="mainButton"
+						Tag="0">
 					<TextBlock Text="Дороги России"
 							   FontSize="12"
 							   HorizontalAlignment="Center"
@@ -150,7 +152,8 @@
 							CornerRadius="0"
 							Margin="0 3 0 0"
 							Background="#e1f4c8"
-							Name="toFirstDep">
+							Name="toFirstDep"
+							Tag="1">
 						<TextBlock Text="Административный департамент"
 								   FontSize="12"
 								   HorizontalAlignment="Center"
@@ -174,7 +177,8 @@
 							CornerRadius="0"
 							Margin="0 3 0 0"
 							Background="#e1f4c8"
-							Name="toSecondDep"> 
+							Name="toSecondDep"
+							Tag="12"> 
 						<TextBlock Text="Академия Умные дороги"
 								   
 								   FontSize="12"
@@ -477,7 +481,8 @@
 							Width="310"
 							CornerRadius="0"
 							Background="#e1f4c8"
-							Name="adminDepart">
+							Name="adminDepart"
+							Tag="2">
 						<TextBlock Text="Административный департамент"
 								   FontSize="12"
 								   HorizontalAlignment="Center"
@@ -499,7 +504,8 @@
 							Height="50"
 							Width="310"
 							CornerRadius="0"
-							Background="#e1f4c8">
+							Background="#e1f4c8"
+							Tag="3">
 						<TextBlock Text="Договорной отдел"
 								   FontSize="12"
 								   HorizontalAlignment="Center"
@@ -521,7 +527,8 @@
 							Height="50"
 							Width="310"
 							CornerRadius="0"
-							Background="#e1f4c8">
+							Background="#e1f4c8"
+							Tag="4">
 						<TextBlock Text="Общий отдел"
 								   FontSize="12"
 								   HorizontalAlignment="Center"
@@ -543,7 +550,8 @@
 							Height="50"
 							Width="310"
 							CornerRadius="0"
-							Background="#e1f4c8">
+							Background="#e1f4c8"
+							Tag="5">
 						<TextBlock Text="Отдел закупок"
 								   FontSize="12"
 								   HorizontalAlignment="Center"
@@ -565,7 +573,8 @@
 							Height="50"
 							Width="310"
 							CornerRadius="0"
-							Background="#e1f4c8">
+							Background="#e1f4c8"
+							Tag="6">
 						<TextBlock Text="Отдел протокольного сопровождения"
 								   FontSize="12"
 								   TextWrapping="Wrap"
@@ -589,7 +598,8 @@
 							Width="310"
 							CornerRadius="0"
 							Name="adminHoz"
-							Background="#e1f4c8">
+							Background="#e1f4c8"
+							Tag="7">
 						<TextBlock Text="Управление административно-хозяйственной деятельности"
 								   FontSize="12"
 								   TextWrapping="Wrap"
@@ -612,7 +622,8 @@
 							Height="50"
 							Width="310"
 							CornerRadius="0"
-							Background="#e1f4c8">
+							Background="#e1f4c8"
+							Tag="10">
 						<TextBlock Text="Управление безопасности"
 								   FontSize="12"
 								   TextWrapping="Wrap"
@@ -635,7 +646,8 @@
 							Height="50"
 							Width="310"
 							CornerRadius="0"
-							Background="#e1f4c8">
+							Background="#e1f4c8"
+							Tag="11">
 						<TextBlock Text="Управление по обеспечению безопасности"
 								   FontSize="12"
 								   TextWrapping="Wrap"
@@ -691,7 +703,8 @@
 							Height="50"
 							Width="310"
 							CornerRadius="0"
-							Background="#e1f4c8">
+							Background="#e1f4c8"
+							Tag="8">
 						<TextBlock Text="Отдел ИТ"
 								   FontSize="12"
 								   HorizontalAlignment="Center"
@@ -713,7 +726,8 @@
 							Height="50"
 							Width="310"
 							CornerRadius="0"
-							Background="#e1f4c8">
+							Background="#e1f4c8"
+							Tag="9">
 						<TextBlock Text="Управление административно-хозяйственной деятельности"
 								   TextWrapping="Wrap"
 								   FontSize="12"
