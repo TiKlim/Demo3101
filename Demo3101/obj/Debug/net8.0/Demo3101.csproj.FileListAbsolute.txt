@@ -345,3 +345,10 @@ C:\Users\prdb\Desktop\121\Demo3101\Demo3101\obj\Debug\net8.0\refint\Avalonia\Dem
 C:\Users\prdb\Desktop\121\Demo3101\Demo3101\obj\Debug\net8.0\Demo3101.csproj.Up2Date
 C:\Users\prdb\Desktop\121\Demo3101\Demo3101\obj\Debug\net8.0\Demo3101.genruntimeconfig.cache
 C:\Users\prdb\Desktop\121\Demo3101\Demo3101\obj\Debug\net8.0\ref\Demo3101.dll
+C:\Users\prdb\Desktop\121\Demo3101\Demo3101\bin\Debug\net8.0\Google.Apis.dll
+C:\Users\prdb\Desktop\121\Demo3101\Demo3101\bin\Debug\net8.0\Google.Apis.Auth.dll
+C:\Users\prdb\Desktop\121\Demo3101\Demo3101\bin\Debug\net8.0\Google.Apis.Calendar.v3.dll
+C:\Users\prdb\Desktop\121\Demo3101\Demo3101\bin\Debug\net8.0\Google.Apis.Core.dll
+C:\Users\prdb\Desktop\121\Demo3101\Demo3101\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\prdb\Desktop\121\Demo3101\Demo3101\bin\Debug\net8.0\System.Management.dll
+C:\Users\prdb\Desktop\121\Demo3101\Demo3101\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Management.dll

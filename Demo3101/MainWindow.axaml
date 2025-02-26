@@ -10,7 +10,7 @@
 		WindowStartupLocation="CenterScreen"
         x:Class="Demo3101.MainWindow"
 		x:CompileBindings="False"
-        Title="Demo3101">
+        Title="Организационная структура">
 	<!--Главный Grid-->
 	<Grid ColumnDefinitions="*,*"
 		  RowDefinitions="Auto,*"
