@@ -18,15 +18,16 @@
 		<DockPanel Background="#e1f4c8"
 				   Grid.ColumnSpan="2"
 				   Grid.Row="0">
-			<Border Background="#78b24b"
+			<Button Background="#78b24b"
 					Height="70"
 					Width="70"
 					CornerRadius="90"
-					Margin="5">
+					Margin="5"
+					Name="logo">
 				<TextBlock Text="логотип"
 						   HorizontalAlignment="Center"
 						   VerticalAlignment="Center"/>
-			</Border>
+			</Button>
 			<TextBox Background="White"
 					 Height="35"
 					 Width="608"

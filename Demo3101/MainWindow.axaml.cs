@@ -74,8 +74,16 @@ namespace Demo3101
             toMain13.Click += ToMain13_Click;
             adminDepart.Click += AdminDepart_Click;
             add.Click += Add_Click;
+            logo.Click += Logo_Click;
             SetData();
         }
+
+        private void Logo_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            FirstWindow firstWindow = new FirstWindow();
+            firstWindow.Show();
+            Close();
+        } 
 
         private void Add_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {

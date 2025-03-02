@@ -1,12 +1,53 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\prdb\\Desktop\\121\\Demo3101\\Demo3101\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\klimt\\Desktop\\123\\Demo3101\\Demo3101\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F786299A-3C96-4FAD-804F-0F15FCCA5827}|Demo3101.csproj|c:\\users\\klimt\\desktop\\123\\demo3101\\demo3101\\informwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{F786299A-3C96-4FAD-804F-0F15FCCA5827}|Demo3101.csproj|solutionrelative:informwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F786299A-3C96-4FAD-804F-0F15FCCA5827}|Demo3101.csproj|c:\\users\\klimt\\desktop\\123\\demo3101\\demo3101\\informwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F786299A-3C96-4FAD-804F-0F15FCCA5827}|Demo3101.csproj|solutionrelative:informwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "InformWindow.axaml",
+              "DocumentMoniker": "C:\\Users\\klimt\\Desktop\\123\\Demo3101\\Demo3101\\InformWindow.axaml",
+              "RelativeDocumentMoniker": "InformWindow.axaml",
+              "ToolTip": "C:\\Users\\klimt\\Desktop\\123\\Demo3101\\Demo3101\\InformWindow.axaml",
+              "RelativeToolTip": "InformWindow.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-02T19:50:02.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "InformWindow.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\klimt\\Desktop\\123\\Demo3101\\Demo3101\\InformWindow.axaml.cs",
+              "RelativeDocumentMoniker": "InformWindow.axaml.cs",
+              "ToolTip": "C:\\Users\\klimt\\Desktop\\123\\Demo3101\\Demo3101\\InformWindow.axaml.cs",
+              "RelativeToolTip": "InformWindow.axaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T19:50:03.202Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
