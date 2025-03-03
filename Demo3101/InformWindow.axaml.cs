@@ -10,6 +10,7 @@ public partial class InformWindow : Window
     {
         InitializeComponent();
         logo.Click += Logo_Click;
+        SetData();
     }
 
     private void Logo_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
@@ -18,4 +19,9 @@ public partial class InformWindow : Window
         firstWindow.Show();
         Close();
     } 
+
+    private void SetData()
+    {
+
+    }
 }
