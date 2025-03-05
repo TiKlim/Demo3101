@@ -1,0 +1,221 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+		MaxHeight="550"
+		MinHeight="550"
+		MaxWidth="800"
+		MinWidth="800"
+		WindowStartupLocation="CenterScreen"
+        x:Class="Demo0203.EditWindow"
+        Title="Добавление"
+		Background="LightGray">
+	<Grid ColumnDefinitions="*,*">
+		<Border Grid.Column="0"
+				Background="White"
+				Margin="15">
+			<Grid RowDefinitions="*,*,*,*,*,*,*,*,*,*,*"
+				  Name="gridData">
+				<TextBox Watermark="Фамилия"
+						 Grid.Row="0"
+						 Margin="15 15 15 2"
+						 Name="sur"/>
+				<TextBox Watermark="Имя"
+						 Grid.Row="1"
+						 Margin="15 0 15 2"
+						 Name="name"/>
+				<TextBox Watermark="Отчество"
+						 Grid.Row="2"
+						 Margin="15 0 15 2"
+						 Name="patron"/>
+				<DatePicker Grid.Row="3"
+							Margin="15 0 15 2"
+							HorizontalAlignment="Center"
+							Name="birth"/>
+				<TextBox Watermark="Телефон"
+						 Grid.Row="4"
+						 Margin="15 0 15 2"
+						 Name="phone"
+						 MaxLength="20"/>
+				<ComboBox Grid.Row="5"
+						  Name="office"
+						  Margin="15 0 15 2">
+
+				</ComboBox>
+				<TextBox Watermark="Email"
+						 Grid.Row="6"
+						 Margin="15 0 15 2"
+						 Name="mail"/>
+				<ComboBox Grid.Row="7"
+						  Name="post"
+						  Margin="15 0 15 2">
+
+				</ComboBox>
+				<ComboBox Grid.Row="8"
+						  Name="helper"
+						  Margin="15 0 15 2">
+
+				</ComboBox>
+				<ComboBox Grid.Row="9"
+						  Name="boss"
+						  Margin="15 0 15 2">
+
+				</ComboBox>
+
+				<Button Content="Сохранить"
+						Grid.Row="10"
+						Margin="15 0 15 0"
+						Background="Green"
+						Name="save"
+						HorizontalAlignment="Right"/>
+			</Grid>
+		</Border>
+		<Border Grid.Column="1 "
+				Background="White"
+				Margin="15"
+				Name="past">
+			<Grid RowDefinitions="*,*,*,*,*,*,*">
+
+				<DockPanel Grid.Row="0"
+						   Margin="15">
+					<Button Content="Прошедшие"
+							Background="#78b24b"/>
+					<Button Content="Текущие"
+							Background="Green"
+							Name="toPresent"/>
+					<Button Content="Будущие"
+							Background="Green"
+							Name="toFuture"/>
+				</DockPanel>
+
+				<TextBlock Text="Обучения"
+						   Grid.Row="1"
+						   Margin="15"/>
+
+				<StackPanel Grid.Row="2"
+							Margin="15">
+					<Border Background="LightGray"
+							Height="40"/>
+					<Border Background="LightGray"
+							Height="40"
+							Margin="0 5 0 0"/>
+				</StackPanel>
+
+				<TextBlock Text="Отгулы"
+						   Grid.Row="3"
+						   Margin="15"/>
+
+				<Border Background="LightGray"
+						Height="40"
+						Grid.Row="4"
+						Margin="15"/>
+
+				<TextBlock Text="Отпуска"
+						   Grid.Row="5"
+						   Margin="15"/>
+
+			</Grid>
+
+		</Border>
+
+		<Border Grid.Column="1 "
+				Background="White"
+				Margin="15"
+				Name="present"
+				IsVisible="False">
+			<Grid RowDefinitions="*,*,*,*,*,*,*">
+
+				<DockPanel Grid.Row="0"
+						   Margin="15">
+					<Button Content="Прошедшие"
+							Background="Green"
+							Name="toPast"/>
+					<Button Content="Текущие"
+							Background="#78b24b"/>
+					<Button Content="Будущие"
+							Background="Green"
+							Name="toFuture2"/>
+				</DockPanel>
+
+				<TextBlock Text="Обучения"
+						   Grid.Row="1"
+						   Margin="15"/>
+
+				<StackPanel Grid.Row="2"
+							Margin="15">
+					<Border Background="LightGray"
+							Height="40"/>
+					<Border Background="LightGray"
+							Height="40"
+							Margin="0 5 0 0"/>
+				</StackPanel>
+
+				<TextBlock Text="Отгулы"
+						   Grid.Row="3"
+						   Margin="15"/>
+
+				<Border Background="LightGray"
+						Height="40"
+						Grid.Row="4"
+						Margin="15"/>
+
+				<TextBlock Text="Отпуска"
+						   Grid.Row="5"
+						   Margin="15"/>
+
+			</Grid>
+
+		</Border>
+
+		<Border Grid.Column="1 "
+				Background="White"
+				Margin="15"
+				Name="future"
+				IsVisible="False">
+			<Grid RowDefinitions="*,*,*,*,*,*,*">
+
+				<DockPanel Grid.Row="0"
+						   Margin="15">
+					<Button Content="Прошедшие"
+							Background="Green"
+							Name="toPast2"/>
+					<Button Content="Текущие"
+							Background="Green"
+							Name="toPresent3"/>
+					<Button Content="Будущие"
+							Background="#78b24b"/>
+				</DockPanel>
+
+				<TextBlock Text="Обучения"
+						   Grid.Row="1"
+						   Margin="15"/>
+
+				<StackPanel Grid.Row="2"
+							Margin="15">
+					<Border Background="LightGray"
+							Height="40"/>
+					<Border Background="LightGray"
+							Height="40"
+							Margin="0 5 0 0"/>
+				</StackPanel>
+
+				<TextBlock Text="Отгулы"
+						   Grid.Row="3"
+						   Margin="15"/>
+
+				<Border Background="LightGray"
+						Height="40"
+						Grid.Row="4"
+						Margin="15"/>
+
+				<TextBlock Text="Отпуска"
+						   Grid.Row="5"
+						   Margin="15"/>
+
+			</Grid>
+
+		</Border>
+
+	</Grid>
+</Window>
