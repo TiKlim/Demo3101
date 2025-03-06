@@ -128,7 +128,9 @@ public partial class KlimBaseContext : DbContext
             entity.Property(e => e.MeetId)
                 .UseIdentityAlwaysColumn()
                 .HasColumnName("meet_id");
-            entity.Property(e => e.MeetDate).HasColumnName("meet_date");
+            entity.Property(e => e.MeetDate)
+                .HasColumnType("timestamp without time zone")
+                .HasColumnName("meet_date");
             entity.Property(e => e.MeetDescription)
                 .HasColumnType("character varying")
                 .HasColumnName("meet_description");

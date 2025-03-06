@@ -33,13 +33,15 @@ public partial class InformWindow : Window
         var sortList = DataSource.Helper.dataBase.MeetingsCalendars.ToList();
         var meetDates = sortList.Select(x => x.MeetDate).ToList();
 
+        staffLB.ItemsSource = DataSource.Helper.dataBase.Staff;
+
         // Очищаем предыдущие выбранные даты, если они есть
-        calendar.SelectedDates.Clear();
+        //calendar.SelectedDates.Clear();
 
         // Добавляем каждую дату в SelectedDates
-        foreach (var date in meetDates)
-        {
-            calendar.SelectedDates.Add(date);
-        }
+        //foreach (var date in meetDates)
+        //{
+            //calendar.SelectedDates.Add(date);
+        //}
     }
 }

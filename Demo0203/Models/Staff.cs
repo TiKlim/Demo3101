@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Demo0203.Models;
 
@@ -20,6 +21,22 @@ public partial class Staff
     public int? StaffOffice { get; set; }
 
     public string? CorporateEmail { get; set; }
+
+    public string GetNameDivision
+    {
+        get
+        {
+            return Iddepats.FirstOrDefault()!.DivisionName!;
+        }
+    }
+
+    public string GetNameRole
+    {
+        get
+        {
+            return Idroles.FirstOrDefault()!.PostName!;
+        }
+    }
 
     public virtual ICollection<MeetingsCalendar> MeetingsCalendars { get; set; } = new List<MeetingsCalendar>();
 
