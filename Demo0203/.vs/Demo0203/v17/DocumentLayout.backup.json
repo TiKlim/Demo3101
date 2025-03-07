@@ -1,24 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\blockchain\\Desktop\\0703\\Demo3101\\Demo0203\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{C69E9188-7F7F-4EDB-A2A3-46094FA49D94}|Demo0203.csproj|c:\\users\\blockchain\\desktop\\0703\\demo3101\\demo0203\\informwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{C69E9188-7F7F-4EDB-A2A3-46094FA49D94}|Demo0203.csproj|solutionrelative:informwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C69E9188-7F7F-4EDB-A2A3-46094FA49D94}|Demo0203.csproj|c:\\users\\blockchain\\desktop\\0703\\demo3101\\demo0203\\models\\meetingscalendar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C69E9188-7F7F-4EDB-A2A3-46094FA49D94}|Demo0203.csproj|solutionrelative:models\\meetingscalendar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C69E9188-7F7F-4EDB-A2A3-46094FA49D94}|Demo0203.csproj|c:\\users\\blockchain\\desktop\\0703\\demo3101\\demo0203\\informwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C69E9188-7F7F-4EDB-A2A3-46094FA49D94}|Demo0203.csproj|solutionrelative:informwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C69E9188-7F7F-4EDB-A2A3-46094FA49D94}|Demo0203.csproj|c:\\users\\blockchain\\desktop\\0703\\demo3101\\demo0203\\models\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C69E9188-7F7F-4EDB-A2A3-46094FA49D94}|Demo0203.csproj|solutionrelative:models\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -26,81 +9,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "InformWindow.axaml",
-              "DocumentMoniker": "C:\\Users\\blockchain\\Desktop\\0703\\Demo3101\\Demo0203\\InformWindow.axaml",
-              "RelativeDocumentMoniker": "InformWindow.axaml",
-              "ToolTip": "C:\\Users\\blockchain\\Desktop\\0703\\Demo3101\\Demo0203\\InformWindow.axaml",
-              "RelativeToolTip": "InformWindow.axaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-05T12:32:47.453Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "InformWindow.axaml.cs",
-              "DocumentMoniker": "C:\\Users\\blockchain\\Desktop\\0703\\Demo3101\\Demo0203\\InformWindow.axaml.cs",
-              "RelativeDocumentMoniker": "InformWindow.axaml.cs",
-              "ToolTip": "C:\\Users\\blockchain\\Desktop\\0703\\Demo3101\\Demo0203\\InformWindow.axaml.cs",
-              "RelativeToolTip": "InformWindow.axaml.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAQwCUAAABwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T12:32:46.701Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "835a9892-3538-4646-984f-be111ebd921c",
-        "Display": 0,
-        "X": -5,
-        "Y": 40,
-        "Width": 1901,
-        "Height": 979,
-        "WindowState": 2
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Staff.cs",
-              "DocumentMoniker": "C:\\Users\\blockchain\\Desktop\\0703\\Demo3101\\Demo0203\\Models\\Staff.cs",
-              "RelativeDocumentMoniker": "Models\\Staff.cs",
-              "ToolTip": "C:\\Users\\blockchain\\Desktop\\0703\\Demo3101\\Demo0203\\Models\\Staff.cs",
-              "RelativeToolTip": "Models\\Staff.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T14:22:11.229Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MeetingsCalendar.cs",
-              "DocumentMoniker": "C:\\Users\\blockchain\\Desktop\\0703\\Demo3101\\Demo0203\\Models\\MeetingsCalendar.cs",
-              "RelativeDocumentMoniker": "Models\\MeetingsCalendar.cs",
-              "ToolTip": "C:\\Users\\blockchain\\Desktop\\0703\\Demo3101\\Demo0203\\Models\\MeetingsCalendar.cs",
-              "RelativeToolTip": "Models\\MeetingsCalendar.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T07:43:21.955Z",
-              "EditorCaption": ""
-            }
-          ]
+          "SelectedChildIndex": -1,
+          "Children": []
         }
       ]
     }

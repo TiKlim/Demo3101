@@ -116,7 +116,8 @@
 						   FontSize="20"
 						   FontWeight="Bold"/>
 
-				<Calendar Name="calendar"/>
+				<Calendar Name="calendar"
+						  Background="#78b24b"/>
 
 				<TextBlock Text="События"
 						   FontSize="20"
