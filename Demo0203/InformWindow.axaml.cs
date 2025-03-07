@@ -1,6 +1,7 @@
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
 namespace Demo0203;
@@ -34,6 +35,7 @@ public partial class InformWindow : Window
         var meetDates = sortList.Select(x => x.MeetDate).ToList();
 
         staffLB.ItemsSource = DataSource.Helper.dataBase.Staff;
+        meetingsLB.ItemsSource = DataSource.Helper.dataBase.MeetingsCalendars.Include(x => x.MeetStaffNavigation);
 
         // Очищаем предыдущие выбранные даты, если они есть
         //calendar.SelectedDates.Clear();

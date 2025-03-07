@@ -42,10 +42,14 @@
 			<TextBlock Text="Сотрудники"
 					   FontSize="20"
 					   FontWeight="Bold"/>
-			<ListBox Name="staffLB">
+			<ListBox Name="staffLB"
+					 ScrollViewer.HorizontalScrollBarVisibility="Auto"
+					 ScrollViewer.VerticalScrollBarVisibility="Disabled"
+					 Width="1420"
+					 HorizontalAlignment="Left">
 				<ListBox.ItemsPanel>
 					<ItemsPanelTemplate>
-						<WrapPanel />
+						<StackPanel Orientation="Horizontal"/>
 					</ItemsPanelTemplate>
 				</ListBox.ItemsPanel>
 				<ListBox.ItemTemplate>
@@ -53,47 +57,50 @@
 						<Border Background="#78b24b"
 								Width="260"
 								Height="150">
-							<Grid ColumnDefinitions="*,*"
+							<Grid ColumnDefinitions="*,Auto"
 								  RowDefinitions="*,*,*,*,*">
-								<DockPanel Grid.Column="0"
+								<StackPanel Grid.Column="0"
 										   Grid.Row="0">
-									<TextBlock
+									<TextBlock Width="150"
 											   Foreground="White"
-											   FontSize="20"
-											   TextWrapping="Wrap">
+											   FontSize="17"
+											   TextWrapping="Wrap"
+											   HorizontalAlignment="Left"
+											   FontWeight="Bold"
+											   Margin="8 8 0 0">
 										<TextBlock.Text>
-											<MultiBinding>
-												<Binding />
+											<MultiBinding StringFormat="{}{0} {1} {2}">
+												<Binding Path="StaffSurname"/>
+												<Binding Path="StaffName" />
+												<Binding Path="StaffPatronimic"/>
 											</MultiBinding>
 										</TextBlock.Text>
 									</TextBlock>
-									<TextBlock Text="{Binding StaffName}"
-											   Margin="3 0 0 0"
-											   Foreground="White"
-											   FontSize="20"
-											   TextWrapping="Wrap"/>
-									<TextBlock Text="{Binding StaffPatronimic}"
-											   Margin="3 0 0 0"
-											   Foreground="White"
-											   FontSize="20"
-											   TextWrapping="Wrap"/>
-								</DockPanel>
+								</StackPanel>
 								<TextBlock Grid.Column="0"
 										   Grid.Row="1"
 										   Text=""
-										   Foreground="White"/>
+										   Foreground="White"
+										   Margin="8 0 0 0"/>
 								<TextBlock Grid.Column="0"
 										   Grid.Row="2"
 										   Text="{Binding CorporateEmail}"
-										   Foreground="White"/>
+										   Foreground="White"
+										   Margin="8 0 0 0"/>
 								<TextBlock Grid.Column="0"
 										   Grid.Row="3"
 										   Text="{Binding StaffWorkPhone}"
-										   Foreground="White"/>
+										   Foreground="White"
+										   Margin="8 0 0 0"/>
 								<TextBlock Grid.Column="0"
 										   Grid.Row="4"
 										   Text="{Binding StaffBirthday}"
-										   Foreground="White"/>
+										   Foreground="White"
+										   Margin="8 8 0 0"/>
+								<Image Source="/Assets/save.png"
+									   Grid.Column="1"
+									   Grid.Row="4"
+									   Margin="7"/>
 							</Grid>
 						</Border>
 					</DataTemplate>
@@ -114,6 +121,60 @@
 				<TextBlock Text="События"
 						   FontSize="20"
 						   FontWeight="Bold"/>
+				<ListBox Name="meetingsLB"
+						 ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+						 ScrollViewer.VerticalScrollBarVisibility="Auto"
+						 Height="120"
+						 HorizontalAlignment="Left">
+					<ListBox.ItemsPanel>
+						<ItemsPanelTemplate>
+							<StackPanel Orientation="Vertical"/>
+						</ItemsPanelTemplate>
+					</ListBox.ItemsPanel>
+					<ListBox.ItemTemplate>
+						<DataTemplate>
+							<Border Background="#78b24b"
+									Width="300"
+									Height="100">
+								<Grid ColumnDefinitions="*,*"
+									  RowDefinitions="*,*,*">
+									<TextBlock Text="{Binding MeetName}"
+											   Foreground="White"
+											   FontWeight="Bold"
+											   Grid.ColumnSpan="2"
+											   Grid.Row="0"
+											   TextWrapping="Wrap"
+											   Margin="8 8 0 0"/>
+									<TextBlock Text="{Binding MeetDescription}"
+											   Foreground="White"
+											   FontSize="10"
+											   Grid.ColumnSpan="2"
+											   Grid.Row="1"
+											   TextWrapping="Wrap"
+											   HorizontalAlignment="Left"
+											   Margin="8 0 0 0"/>
+									<DockPanel Grid.Column="0"
+											   Grid.Row="2"
+											   HorizontalAlignment="Left">
+										<Image Source="/Assets/calendar.png"
+											   Margin="7"/>
+										<TextBlock Text="{Binding MeetDate}"
+												   Foreground="White"
+												   TextWrapping="Wrap"
+												   VerticalAlignment="Center"/>
+									</DockPanel>
+									<TextBlock Text="{Binding MeetStaffNavigation.StaffSurname}"
+											   Foreground="White"
+											   Grid.Column="1"
+											   Grid.Row="3"
+											   VerticalAlignment="Center"
+											   HorizontalAlignment="Right"
+											   Margin="0 0 8 0"/>
+								</Grid>
+							</Border>
+						</DataTemplate>
+					</ListBox.ItemTemplate>
+				</ListBox>
 
 			</StackPanel>
 		</Grid>
