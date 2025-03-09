@@ -2,9 +2,11 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Controls.Primitives;
 using Avalonia.Markup.Xaml;
+using Avalonia.Media;
 using Avalonia.VisualTree;
 using Demo0203.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -12,7 +14,7 @@ namespace Demo0203;
 
 public partial class InformWindow : Window
 {
-    //private List<MeetingsCalendar> meetingsCalendars = 
+    List<DateTime> listDate = new List<DateTime>();
 
     public InformWindow()
     {
@@ -26,20 +28,30 @@ public partial class InformWindow : Window
 
     private void CalendarColors()
     {
-        foreach (var point in calendar.GetVisualDescendants())
+        foreach (var index in calendar.GetVisualDescendants())
         {
-            if (point is CalendarDayButton dayButton)
+            if (index is CalendarDayButton dayButton)
             {
                 var now = (calendar as Calendar).DisplayDate;
-                string contentDay = dayButton.Content!.ToString()!;
+                string display = dayButton.Content!.ToString()!;
 
                 try
                 {
-                    
+                    if (listDate.Contains(new DateTime(now.Year, now.Month, int.Parse(display))))
+                    {
+                        dayButton.Background = Brushes.Yellow;
+                        dayButton.Foreground = Brushes.Black;
+                    }
+                    else
+                    {
+                        dayButton.Background = Brushes.LightGray;
+                        dayButton.Foreground = Brushes.Black;
+                    }
                 }
                 catch
                 {
-                    
+                    dayButton.Background = Brushes.LightGray;
+                    dayButton.Foreground = Brushes.Black;
                 }
             }
         }
@@ -64,6 +76,8 @@ public partial class InformWindow : Window
 
     private void SetData()
     {
+        listDate = DataSource.Helper.dataBase.MeetingsCalendars.Select(x => x.MeetDate).ToList();
+
         var searchList = DataSource.Helper.dataBase.Staff.Include(x => x.MeetingsCalendars).ToList();
 
         string searchSearch = searchTB.Text?.ToLower() ?? "";

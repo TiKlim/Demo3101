@@ -1,18 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\blockchain\\Desktop\\0703\\Demo3101\\Demo0203\\",
+  "WorkspaceRootPath": "C:\\Users\\klimt\\Desktop\\demo\\Demo3101\\Demo0203\\",
   "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": -1,
-          "Children": []
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }
