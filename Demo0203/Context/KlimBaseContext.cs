@@ -30,7 +30,7 @@ public partial class KlimBaseContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseNpgsql("Host=89.110.53.87:5522; Database=klim_base; Username=klim; Password=nissan");
+        => optionsBuilder.UseNpgsql("Host=89.110.53.87:5522;Database=klim_base;Username=klim;Password=nissan");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -150,6 +150,25 @@ public partial class KlimBaseContext : DbContext
             entity.HasOne(d => d.MeetTypeNavigation).WithMany(p => p.MeetingsCalendars)
                 .HasForeignKey(d => d.MeetType)
                 .HasConstraintName("meetings_calendar_meet_types_fk");
+
+            entity.HasMany(d => d.BirthDates).WithMany(p => p.MeetDates)
+                .UsingEntity<Dictionary<string, object>>(
+                    "CalendarDate",
+                    r => r.HasOne<Staff>().WithMany()
+                        .HasForeignKey("BirthDates")
+                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .HasConstraintName("calendar_dates_staff_fk"),
+                    l => l.HasOne<MeetingsCalendar>().WithMany()
+                        .HasForeignKey("MeetDates")
+                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .HasConstraintName("calendar_dates_meetings_calendar_fk"),
+                    j =>
+                    {
+                        j.HasKey("MeetDates", "BirthDates").HasName("calendar_dates_pk");
+                        j.ToTable("calendar_dates", "demo3101");
+                        j.IndexerProperty<int>("MeetDates").HasColumnName("meet_dates");
+                        j.IndexerProperty<int>("BirthDates").HasColumnName("birth_dates");
+                    });
         });
 
         modelBuilder.Entity<Office>(entity =>
@@ -211,7 +230,9 @@ public partial class KlimBaseContext : DbContext
             entity.Property(e => e.CorporateEmail)
                 .HasColumnType("character varying")
                 .HasColumnName("corporate_email");
-            entity.Property(e => e.StaffBirthday).HasColumnName("staff_birthday");
+            entity.Property(e => e.StaffBirthday)
+                .HasColumnType("timestamp without time zone")
+                .HasColumnName("staff_birthday");
             entity.Property(e => e.StaffName)
                 .HasColumnType("character varying")
                 .HasColumnName("staff_name");

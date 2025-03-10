@@ -13,7 +13,7 @@ public partial class MeetingsCalendar
 
     public bool? MeetStatus { get; set; }
 
-    public DateTime MeetDate { get; set; }
+    public DateTime? MeetDate { get; set; }
 
     public TimeOnly? MeetTimeStart { get; set; }
 
@@ -26,4 +26,6 @@ public partial class MeetingsCalendar
     public virtual Staff? MeetStaffNavigation { get; set; }
 
     public virtual MeetType? MeetTypeNavigation { get; set; }
+
+    public virtual ICollection<Staff> BirthDates { get; set; } = new List<Staff>();
 }

@@ -1,12 +1,71 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\klimt\\Desktop\\demo\\Demo3101\\Demo0203\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\blockchain\\Desktop\\demo\\Demo3101\\Demo0203\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C69E9188-7F7F-4EDB-A2A3-46094FA49D94}|Demo0203.csproj|c:\\users\\blockchain\\desktop\\demo\\demo3101\\demo0203\\informwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C69E9188-7F7F-4EDB-A2A3-46094FA49D94}|Demo0203.csproj|solutionrelative:informwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69E9188-7F7F-4EDB-A2A3-46094FA49D94}|Demo0203.csproj|c:\\users\\blockchain\\desktop\\demo\\demo3101\\demo0203\\organizationwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C69E9188-7F7F-4EDB-A2A3-46094FA49D94}|Demo0203.csproj|solutionrelative:organizationwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69E9188-7F7F-4EDB-A2A3-46094FA49D94}|Demo0203.csproj|c:\\users\\blockchain\\desktop\\demo\\demo3101\\demo0203\\models\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C69E9188-7F7F-4EDB-A2A3-46094FA49D94}|Demo0203.csproj|solutionrelative:models\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrganizationWindow.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\blockchain\\Desktop\\demo\\Demo3101\\Demo0203\\OrganizationWindow.axaml.cs",
+              "RelativeDocumentMoniker": "OrganizationWindow.axaml.cs",
+              "ToolTip": "C:\\Users\\blockchain\\Desktop\\demo\\Demo3101\\Demo0203\\OrganizationWindow.axaml.cs",
+              "RelativeToolTip": "OrganizationWindow.axaml.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAGYAAABuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T13:06:33.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "InformWindow.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\blockchain\\Desktop\\demo\\Demo3101\\Demo0203\\InformWindow.axaml.cs",
+              "RelativeDocumentMoniker": "InformWindow.axaml.cs",
+              "ToolTip": "C:\\Users\\blockchain\\Desktop\\demo\\Demo3101\\Demo0203\\InformWindow.axaml.cs",
+              "RelativeToolTip": "InformWindow.axaml.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAmwDwAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T13:00:55.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Staff.cs",
+              "DocumentMoniker": "C:\\Users\\blockchain\\Desktop\\demo\\Demo3101\\Demo0203\\Models\\Staff.cs",
+              "RelativeDocumentMoniker": "Models\\Staff.cs",
+              "ToolTip": "C:\\Users\\blockchain\\Desktop\\demo\\Demo3101\\Demo0203\\Models\\Staff.cs",
+              "RelativeToolTip": "Models\\Staff.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAmwCgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T13:00:32.762Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

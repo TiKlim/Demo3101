@@ -14,7 +14,7 @@ public partial class Staff
 
     public string? StaffPatronimic { get; set; }
 
-    public DateOnly? StaffBirthday { get; set; }
+    public DateTime? StaffBirthday { get; set; }
 
     public string? StaffWorkPhone { get; set; }
 
@@ -38,6 +38,14 @@ public partial class Staff
         }
     }
 
+    public DateTime? CalendarDates
+    {
+        get
+        {
+            return MeetDates.FirstOrDefault()!.MeetDate!;
+        }
+    }
+
     public virtual ICollection<MeetingsCalendar> MeetingsCalendars { get; set; } = new List<MeetingsCalendar>();
 
     public virtual Office? StaffOfficeNavigation { get; set; }
@@ -45,4 +53,6 @@ public partial class Staff
     public virtual ICollection<Division> Iddepats { get; set; } = new List<Division>();
 
     public virtual ICollection<Post> Idroles { get; set; } = new List<Post>();
+
+    public virtual ICollection<MeetingsCalendar> MeetDates { get; set; } = new List<MeetingsCalendar>();
 }

@@ -42,7 +42,7 @@ public partial class EditWindow : Window
             Staff.StaffSurname = sur.Text;
             Staff.StaffName = name.Text;
             Staff.StaffPatronimic = patron.Text;
-            Staff.StaffBirthday = new DateOnly(birth.SelectedDate.Value.Year, birth.SelectedDate.Value.Month, birth.SelectedDate.Value.Day);
+            //Staff.StaffBirthday = new DateTime?(birth.SelectedDate.Value.Year, birth.SelectedDate.Value.Month, birth.SelectedDate.Value.Day);
             Staff.StaffWorkPhone = phone.Text;
 
             DataSource.Helper.dataBase.Staff.Add(Staff);
