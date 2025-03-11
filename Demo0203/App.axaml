@@ -5,6 +5,11 @@
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
     <Application.Styles>
+		<Style Selector="CalendarDayButton:selected /template/ Border">
+			<Setter Property="CornerRadius" Value="25"></Setter>
+
+			<Setter Property="BorderThickness" Value="2"></Setter>
+		</Style>
         <FluentTheme />
     </Application.Styles>
 </Application>

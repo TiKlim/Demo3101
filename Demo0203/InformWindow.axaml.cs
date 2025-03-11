@@ -23,16 +23,26 @@ public partial class InformWindow : Window
     List<News.Class1> newsWeek = new List<News.Class1>();
     public Bitmap bitmap = new Bitmap($@"Assets\\cake.png");
 
+    public Image image = new Image()
+    {
+        Source = new Bitmap($@"Assets\\cake.png"),
+        Width = 40,
+        Height = 40,
+    };
+
     public InformWindow()
     {
         InitializeComponent();
         logo.Click += Logo_Click;
         calendar.Loaded += Calendar_Loaded;
         calendar.DisplayDateChanged += Calendar_DisplayDateChanged;
+        searchTB.TextChanged += SearchTB_TextChanged;
 
         SetData();
     }
 
+    private void SearchTB_TextChanged(object? sender, TextChangedEventArgs e) => Search();
+      
     private void CalendarColors()
     {
         foreach (var index in calendar.GetVisualDescendants())
@@ -41,35 +51,28 @@ public partial class InformWindow : Window
             {
                 var now = (calendar as Calendar).DisplayDate;
                 string display = dayButton.Content!.ToString()!;
-                //DateOnly dateNow = new DateOnly(now.Year, now.Month, int.Parse(display));
-                //var bbb = dateNow.ToDateTime(new TimeOnly());
-                //var bbb = new DateTime(now.Year, now.Month, int.Parse(display));
 
                 try
                 {
-                    /*if (listDate.Contains(bbb) && listBirth.Contains(bbb) && calendar.SelectedDates.Count >= 2 && calendar.SelectedDates.Count < 5)
+                    if (listBirth.Contains(new DateTime(now.Year, now.Month, int.Parse(display))))
                     {
-                        dayButton.Background = Brushes.Yellow;
-                        dayButton.Foreground = Brushes.Black;
+                        dayButton.Background = Brushes.White;
+                        dayButton.Content = new Image()
+                        {
+                            Source = new Bitmap($@"Assets\\cake.png"),
+                            Width = 40,
+                            Height = 43,
+                        };
                     }
                     else
                     {
-                        dayButton.Background = Brushes.LightGray;
+                        dayButton.Background = Brushes.White;
                         dayButton.Foreground = Brushes.Black;
                     }
 
-                    if (listDate.Contains(bbb) && listBirth.Contains(bbb) && calendar.SelectedDates.Count >= 5)
-                    {
-                        dayButton.Background = Brushes.Red;
-                        dayButton.Foreground = Brushes.Black;
-                    }
-                    else
-                    {
-                        dayButton.Background = Brushes.LightGray;
-                        dayButton.Foreground = Brushes.Black;
-                    }*/
-
-                    if (listDate.Contains(new DateTime(now.Year, now.Month, int.Parse(display))) && calendar.SelectedDates.Count < 2)
+                    if (listDate.Contains(new DateTime(now.Year, now.Month, int.Parse(display))) 
+                        || listBirth.Contains(new DateTime(now.Year, now.Month, int.Parse(display))) 
+                        && calendar.SelectedDates.Count < 2)
                     {
                         dayButton.Background = Brushes.Green;
                         dayButton.Foreground = Brushes.Black;
@@ -79,13 +82,43 @@ public partial class InformWindow : Window
                         dayButton.Background = Brushes.White;
                         dayButton.Foreground = Brushes.Black;
                     }
+                }
+                catch
+                {
+                    dayButton.Background = Brushes.White;
+                    dayButton.Foreground = Brushes.Black;
+                }
 
-                    if (listBirth.Contains(new DateTime(now.Year, now.Month, int.Parse(display))))
+                try
+                {
+                    if (listDate.Contains(new DateTime(now.Year, now.Month, int.Parse(display)))
+                        || listBirth.Contains(new DateTime(now.Year, now.Month, int.Parse(display)))
+                        && calendar.SelectedDates.Count >= 5)
+                    {
+                        dayButton.Background = Brushes.Red;
+                        dayButton.Foreground = Brushes.Black;
+                    }
+                    else
                     {
                         dayButton.Background = Brushes.White;
-                        dayButton.Content = bitmap ;
-                        dayButton.Width = 30;
-                        dayButton.Height = 30;
+                        dayButton.Foreground = Brushes.Black;
+                    }
+                }
+                catch
+                {
+                    dayButton.Background = Brushes.White;
+                    dayButton.Foreground = Brushes.Black;
+                }
+
+                try
+                {
+                    if (listDate.Contains(new DateTime(now.Year, now.Month, int.Parse(display)))
+                        || listBirth.Contains(new DateTime(now.Year, now.Month, int.Parse(display)))
+                        && calendar.SelectedDates.Count >= 2
+                        && calendar.SelectedDates.Count < 5)
+                    {
+                        dayButton.Background = Brushes.Yellow;
+                        dayButton.Foreground = Brushes.Black;
                     }
                     else
                     {
@@ -121,10 +154,8 @@ public partial class InformWindow : Window
 
     private void SetData()
     {
-        //listDate = DataSource.Helper.dataBase.MeetingsCalendars.Include(x => x.MeetStaffNavigation!.StaffBirthday).Select(x => x.MeetDate).ToList();
-        //listDate = DataSource.Helper.dataBase.MeetingsCalendars.Include(x => x.MeetStaffNavigation).Select(x => x.MeetDate).Select(x => x.StaffBirthday).ToList();
-        listDate = DataSource.Helper.dataBase.Staff.Select(x => x.StaffBirthday).ToList();
-        listBirth = DataSource.Helper.dataBase.MeetingsCalendars.Select(x => x.MeetDate).ToList();
+        listDate = DataSource.Helper.dataBase.MeetingsCalendars.Select(x => x.MeetDate).ToList();
+        listBirth = DataSource.Helper.dataBase.Staff.Select(x => x.StaffBirthday).ToList();
 
         var baseDirectory = AppContext.BaseDirectory;
         var jsonPath = Path.Combine(baseDirectory, "News", "news_response.json");
@@ -132,25 +163,37 @@ public partial class InformWindow : Window
 
         newsWeek = JsonConvert.DeserializeObject<List<News.Class1>>(jsonFile);
 
-        //&& x.MeetStaffNavigation.StaffBirthday
-
-        var searchList = DataSource.Helper.dataBase.Staff.Include(x => x.MeetingsCalendars).ToList();
-
-        string searchSearch = searchTB.Text?.ToLower() ?? "";
-        if (searchSearch.Length > 0)
-        {
-            searchList = searchList.Where(x => x.StaffName.ToLower().Contains(searchSearch) && 
-            x.StaffSurname.ToLower().Contains(searchSearch) && 
-            x.StaffPatronimic.ToLower().Contains(searchSearch) && 
-            x.CorporateEmail.ToLower().Contains(searchSearch) && 
-            x.StaffWorkPhone.ToLower().Contains(searchSearch)).ToList();
-        }
-
         var sortList = DataSource.Helper.dataBase.MeetingsCalendars.ToList();
         var meetDates = sortList.Select(x => x.MeetDate).ToList();
 
         staffLB.ItemsSource = DataSource.Helper.dataBase.Staff;
         meetingsLB.ItemsSource = DataSource.Helper.dataBase.MeetingsCalendars.Include(x => x.MeetStaffNavigation);
         newsLB.ItemsSource = newsWeek;
+    }
+
+    private void Calendar_SelectedDatesChanged(object? sender, Avalonia.Controls.SelectionChangedEventArgs e) => CalendarColors();
+
+    private void Search()
+    {
+        var searchList = DataSource.Helper.dataBase.Staff.Include(x => x.MeetingsCalendars).ToList();
+
+        string searchSearch = searchTB.Text?.ToLower() ?? "";
+        if (searchSearch.Length > 0)
+        {
+            try
+            {
+                searchList = searchList.Where(x => x.StaffName.ToLower().Contains(searchSearch.ToLower()) ||
+            x.StaffSurname.ToLower().Contains(searchSearch.ToLower()) ||
+            x.StaffPatronimic.ToLower().Contains(searchSearch.ToLower()) ||
+            x.CorporateEmail.ToLower().Contains(searchSearch.ToLower()) ||
+            x.StaffWorkPhone.ToLower().Contains(searchSearch.ToLower())).ToList();
+            }
+            catch
+            {
+
+            }
+        }
+
+        staffLB.ItemsSource = searchList;
     }
 }

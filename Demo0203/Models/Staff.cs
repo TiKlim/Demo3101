@@ -46,6 +46,14 @@ public partial class Staff
         }
     }
 
+    public string NamesMeet
+    {
+        get
+        {
+            return MeetingsCalendars.FirstOrDefault()!.MeetName!;
+        }
+    }
+
     public virtual ICollection<MeetingsCalendar> MeetingsCalendars { get; set; } = new List<MeetingsCalendar>();
 
     public virtual Office? StaffOfficeNavigation { get; set; }
