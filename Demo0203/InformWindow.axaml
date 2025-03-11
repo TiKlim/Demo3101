@@ -111,7 +111,7 @@
 		<Grid ColumnDefinitions="Auto,Auto"
 			  Grid.Row="2"
 			  Margin="20 20 0 0">
-			<StackPanel>
+			<StackPanel Grid.Column="0">
 				<TextBlock Text="Календарь событий"
 						   FontSize="20"
 						   FontWeight="Bold"/>
@@ -176,7 +176,59 @@
 						</DataTemplate>
 					</ListBox.ItemTemplate>
 				</ListBox>
+			</StackPanel>
 
+			<StackPanel Grid.Column="1"
+						Margin="10 0 0 0"> 
+				<TextBlock Text="Новости"
+						   FontSize="20"
+						   FontWeight="Bold"/>
+				<ListBox Name="newsLB"
+						 ScrollViewer.HorizontalScrollBarVisibility="Auto"
+						 ScrollViewer.VerticalScrollBarVisibility="Disabled"
+						 Height="477"
+						 Width="1085"
+						 HorizontalAlignment="Center">
+					<ListBox.ItemsPanel>
+						<ItemsPanelTemplate>
+							<WrapPanel HorizontalAlignment="Center"/>
+						</ItemsPanelTemplate>
+					</ListBox.ItemsPanel>
+					<ListBox.ItemTemplate>
+						<DataTemplate>
+							<Border Background="#78b24b"
+									Width="600"
+									Height="300">
+								<Grid RowDefinitions="*,*">
+									<Border Grid.Row="0"
+											Background="LightGray"/>
+									<Border Grid.Row="1"
+											Background="#78b24b">
+										<Grid RowDefinitions="Auto,Auto,*">
+											<TextBlock Grid.Row="0"
+													   Text="{Binding title}"
+													   FontWeight="Bold"
+													   Foreground="White"
+													   TextWrapping="Wrap"
+													   Margin="5 5 0 0"/>
+											<TextBlock Grid.Row="1"
+													   Text="{Binding description}"
+													   Foreground="White"
+													   TextWrapping="Wrap"
+													   FontSize="10"
+													   Margin="5 0 0 0"/>
+											<TextBlock Grid.Row="2"
+													   Text="{Binding date}"
+													   Foreground="White"
+													   VerticalAlignment="Bottom"
+													   Margin="5 0 0 5"/>
+										</Grid>
+									</Border>
+								</Grid>
+							</Border>
+						</DataTemplate>
+					</ListBox.ItemTemplate>
+				</ListBox>
 			</StackPanel>
 		</Grid>
 	</Grid>

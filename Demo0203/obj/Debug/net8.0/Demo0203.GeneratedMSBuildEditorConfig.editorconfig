@@ -23,23 +23,21 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Demo0203
-build_property.ProjectDir = C:\Users\blockchain\Desktop\demo\Demo3101\Demo0203\
+build_property.ProjectDir = C:\Users\class_student\Desktop\demo0203\Demo3101\Demo0203\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
-build_property.EffectiveAnalysisLevelStyle = 8.0
-build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/blockchain/Desktop/demo/Demo3101/Demo0203/App.axaml]
+[C:/Users/class_student/Desktop/demo0203/Demo3101/Demo0203/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/blockchain/Desktop/demo/Demo3101/Demo0203/EditWindow.axaml]
+[C:/Users/class_student/Desktop/demo0203/Demo3101/Demo0203/EditWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/blockchain/Desktop/demo/Demo3101/Demo0203/InformWindow.axaml]
+[C:/Users/class_student/Desktop/demo0203/Demo3101/Demo0203/InformWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/blockchain/Desktop/demo/Demo3101/Demo0203/MainWindow.axaml]
+[C:/Users/class_student/Desktop/demo0203/Demo3101/Demo0203/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/blockchain/Desktop/demo/Demo3101/Demo0203/OrganizationWindow.axaml]
+[C:/Users/class_student/Desktop/demo0203/Demo3101/Demo0203/OrganizationWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

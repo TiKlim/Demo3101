@@ -8,7 +8,11 @@ using Demo0203.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using Newtonsoft.Json;
+using Avalonia.Media.Imaging;
+using System.Drawing;
 
 namespace Demo0203;
 
@@ -16,6 +20,8 @@ public partial class InformWindow : Window
 {
     List<DateTime?> listDate = new List<DateTime?>();
     List<DateTime?> listBirth = new List<DateTime?>();
+    List<News.Class1> newsWeek = new List<News.Class1>();
+    public Bitmap bitmap = new Bitmap($@"Assets\\cake.png");
 
     public InformWindow()
     {
@@ -35,14 +41,13 @@ public partial class InformWindow : Window
             {
                 var now = (calendar as Calendar).DisplayDate;
                 string display = dayButton.Content!.ToString()!;
-                DateOnly dateNow = new DateOnly(now.Year, now.Month, int.Parse(display));
-                var bbb = dateNow.ToDateTime(new TimeOnly());
-                /*
-                var birthNow = new DateTime(now.Year, now.Month, int.Parse(display));*/
+                //DateOnly dateNow = new DateOnly(now.Year, now.Month, int.Parse(display));
+                //var bbb = dateNow.ToDateTime(new TimeOnly());
+                //var bbb = new DateTime(now.Year, now.Month, int.Parse(display));
 
                 try
                 {
-                    if (listDate.Contains(bbb) && listBirth.Contains(bbb) && calendar.SelectedDates.Count >= 2 && calendar.SelectedDates.Count < 5)
+                    /*if (listDate.Contains(bbb) && listBirth.Contains(bbb) && calendar.SelectedDates.Count >= 2 && calendar.SelectedDates.Count < 5)
                     {
                         dayButton.Background = Brushes.Yellow;
                         dayButton.Foreground = Brushes.Black;
@@ -62,22 +67,35 @@ public partial class InformWindow : Window
                     {
                         dayButton.Background = Brushes.LightGray;
                         dayButton.Foreground = Brushes.Black;
-                    }
+                    }*/
 
-                    if (listDate.Contains(bbb) && listBirth.Contains(bbb) && calendar.SelectedDates.Count < 2)
+                    if (listDate.Contains(new DateTime(now.Year, now.Month, int.Parse(display))) && calendar.SelectedDates.Count < 2)
                     {
                         dayButton.Background = Brushes.Green;
                         dayButton.Foreground = Brushes.Black;
                     }
                     else
                     {
-                        dayButton.Background = Brushes.LightGray;
+                        dayButton.Background = Brushes.White;
+                        dayButton.Foreground = Brushes.Black;
+                    }
+
+                    if (listBirth.Contains(new DateTime(now.Year, now.Month, int.Parse(display))))
+                    {
+                        dayButton.Background = Brushes.White;
+                        dayButton.Content = bitmap ;
+                        dayButton.Width = 30;
+                        dayButton.Height = 30;
+                    }
+                    else
+                    {
+                        dayButton.Background = Brushes.White;
                         dayButton.Foreground = Brushes.Black;
                     }
                 }
                 catch
                 {
-                    dayButton.Background = Brushes.LightGray;
+                    dayButton.Background = Brushes.White;
                     dayButton.Foreground = Brushes.Black;
                 }
             }
@@ -108,6 +126,12 @@ public partial class InformWindow : Window
         listDate = DataSource.Helper.dataBase.Staff.Select(x => x.StaffBirthday).ToList();
         listBirth = DataSource.Helper.dataBase.MeetingsCalendars.Select(x => x.MeetDate).ToList();
 
+        var baseDirectory = AppContext.BaseDirectory;
+        var jsonPath = Path.Combine(baseDirectory, "News", "news_response.json");
+        var jsonFile = File.ReadAllText(jsonPath);
+
+        newsWeek = JsonConvert.DeserializeObject<List<News.Class1>>(jsonFile);
+
         //&& x.MeetStaffNavigation.StaffBirthday
 
         var searchList = DataSource.Helper.dataBase.Staff.Include(x => x.MeetingsCalendars).ToList();
@@ -127,5 +151,6 @@ public partial class InformWindow : Window
 
         staffLB.ItemsSource = DataSource.Helper.dataBase.Staff;
         meetingsLB.ItemsSource = DataSource.Helper.dataBase.MeetingsCalendars.Include(x => x.MeetStaffNavigation);
+        newsLB.ItemsSource = newsWeek;
     }
 }
